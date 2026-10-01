@@ -1,5 +1,7 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,185 +9,470 @@
     <title>Eduardo Souza Mattos | Portfólio</title>
 
     <style>
-        body {
+
+        * {
+            box-sizing: border-box;
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f8;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background: #f4f6f8;
             color: #222;
         }
 
         header {
-            background-color: #1f2937;
+            background: #111827;
             color: white;
+            padding: 80px 20px;
             text-align: center;
-            padding: 60px 20px;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 38px;
+            font-size: 42px;
+            margin-bottom: 15px;
         }
 
         header p {
             font-size: 20px;
-            margin-top: 15px;
+            color: #d1d5db;
+            margin-bottom: 25px;
         }
 
-        section {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        h2 {
-            color: #1f2937;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
-        }
-
-        .projetos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .projeto {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .projeto h3 {
-            margin-top: 0;
-        }
-
-        .botao {
+        .links a {
             display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background-color: #2563eb;
+            margin: 5px;
+            padding: 10px 18px;
+            background: #2563eb;
             color: white;
             text-decoration: none;
             border-radius: 6px;
         }
 
-        footer {
-            text-align: center;
-            background-color: #1f2937;
-            color: white;
-            padding: 25px;
-            margin-top: 50px;
+        .links a:hover {
+            background: #1d4ed8;
         }
+
+        section {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        section h2 {
+            font-size: 30px;
+            margin-bottom: 25px;
+            color: #111827;
+        }
+
+        .sobre {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .habilidades {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .habilidade {
+            background: #e5e7eb;
+            padding: 10px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .projetos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .projeto {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+        }
+
+        .projeto:hover {
+            transform: translateY(-5px);
+        }
+
+        .projeto h3 {
+            margin-bottom: 12px;
+            color: #111827;
+        }
+
+        .tecnologias {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #4b5563;
+        }
+
+        .botao {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 10px 16px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .botao:hover {
+            background: #1d4ed8;
+        }
+
+        .formacao {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 70px;
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            header p {
+                font-size: 17px;
+            }
+
+            section h2 {
+                font-size: 26px;
+            }
+
+        }
+
     </style>
+
 </head>
 
 <body>
 
 <header>
+
     <h1>Eduardo Souza Mattos</h1>
-    <p>Portfólio de Tecnologia e Análise de Dados</p>
+
+    <p>
+        Tecnologia da Informação | Análise de Dados | Python | SQL
+    </p>
+
+    <div class="links">
+
+        <a href="https://github.com/Sponge1774" target="_blank">
+            GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/eduardosouzamattos2018/" target="_blank">
+            LinkedIn
+        </a>
+
+    </div>
+
 </header>
 
+
 <section>
+
     <h2>Sobre mim</h2>
 
-    <p>
-        Profissional em transição de carreira para a área de Tecnologia da Informação,
-        atualmente cursando Análise e Desenvolvimento de Sistemas.
-    </p>
+    <div class="sobre">
 
-    <p>
-        Tenho interesse em análise de dados, Python, SQL, banco de dados,
-        cibersegurança, redes e computação em nuvem.
-    </p>
+        <p>
+            Profissional em transição de carreira para a área de Tecnologia da
+            Informação, com experiência profissional em diferentes áreas de negócios
+            e formação em Matemática e Recursos Humanos.
+        </p>
+
+        <br>
+
+        <p>
+            Atualmente curso Análise e Desenvolvimento de Sistemas, desenvolvendo
+            conhecimentos em programação, análise de dados, bancos de dados,
+            redes, infraestrutura e cibersegurança.
+        </p>
+
+        <br>
+
+        <p>
+            Meu objetivo é aplicar conhecimentos técnicos e capacidade analítica
+            na resolução de problemas e no desenvolvimento de soluções
+            tecnológicas.
+        </p>
+
+    </div>
+
 </section>
 
+
 <section>
+
+    <h2>Habilidades</h2>
+
+    <div class="habilidades">
+
+        <span class="habilidade">Python</span>
+
+        <span class="habilidade">SQL</span>
+
+        <span class="habilidade">Análise de Dados</span>
+
+        <span class="habilidade">Banco de Dados</span>
+
+        <span class="habilidade">Git & GitHub</span>
+
+        <span class="habilidade">Redes</span>
+
+        <span class="habilidade">Linux</span>
+
+        <span class="habilidade">Windows Server</span>
+
+        <span class="habilidade">Virtualização</span>
+
+        <span class="habilidade">Cibersegurança</span>
+
+    </div>
+
+</section>
+
+
+<section>
+
     <h2>Projetos</h2>
 
     <div class="projetos">
 
+
         <div class="projeto">
+
             <h3>Sistema de Controle de Estoque</h3>
+
             <p>
-                Projeto desenvolvido para controle e gerenciamento de estoque.
+                Sistema desenvolvido para controle e gerenciamento de produtos
+                e estoque.
             </p>
 
-            <a class="botao"
-               href="https://github.com/Sponge1774/SISTEMA-DE-CONTROLE-DE-ESTOQUE"
-               target="_blank">
+            <p class="tecnologias">
+                Tecnologia: Python
+            </p>
+
+            <a
+                class="botao"
+                href="https://github.com/Sponge1774/SISTEMA-DE-CONTROLE-DE-ESTOQUE"
+                target="_blank">
                 Ver projeto
             </a>
+
         </div>
 
+
         <div class="projeto">
-            <h3>Modelagem de Dados</h3>
+
+            <h3>Modelagem de Dados — Ciclo de Vendas</h3>
+
             <p>
-                Projeto de modelagem de banco de dados para ciclo de vendas
-                de supermercado.
+                Projeto de modelagem e implementação de banco de dados para
+                um cenário de vendas de supermercado.
             </p>
 
-            <a class="botao"
-               href="https://github.com/Sponge1774/modelagem_dados_ciclo_vendas_supermercado_sql"
-               target="_blank">
+            <p class="tecnologias">
+                Tecnologias: SQL | MySQL | Modelagem de Dados
+            </p>
+
+            <a
+                class="botao"
+                href="https://github.com/Sponge1774/modelagem_dados_ciclo_vendas_supermercado_sql"
+                target="_blank">
                 Ver projeto
             </a>
+
         </div>
 
-        <div class="projeto">
-            <h3>Projetos de Python</h3>
-            <p>
-                Desenvolvimento de aplicações utilizando Python e conceitos
-                de lógica de programação.
-            </p>
-
-            <a class="botao"
-               href="https://github.com/Sponge1774"
-               target="_blank">
-                Ver GitHub
-            </a>
-        </div>
 
         <div class="projeto">
+
             <h3>Cibersegurança</h3>
+
             <p>
-                Estudos e projetos relacionados à segurança da informação,
-                redes e infraestrutura.
+                Estudos e atividades práticas relacionados à segurança da
+                informação, redes e análise de vulnerabilidades.
             </p>
 
-            <a class="botao"
-               href="https://github.com/Sponge1774/cyber-security-tsti-unifecaf"
-               target="_blank">
+            <p class="tecnologias">
+                Tecnologias: Linux | Redes | Segurança
+            </p>
+
+            <a
+                class="botao"
+                href="https://github.com/Sponge1774/cyber-security-tsti-unifecaf"
+                target="_blank">
                 Ver projeto
             </a>
+
         </div>
+
+
+        <div class="projeto">
+
+            <h3>Redes de Computadores</h3>
+
+            <p>
+                Projeto relacionado à infraestrutura de redes para ambiente
+                de varejo, incluindo controle de estoque e CFTV.
+            </p>
+
+            <p class="tecnologias">
+                Tecnologias: Redes | CFTV | Infraestrutura
+            </p>
+
+            <a
+                class="botao"
+                href="https://github.com/Sponge1774/computer_network_projeto_de_redes_loja_varejo_controle_estoque_CFTV"
+                target="_blank">
+                Ver projeto
+            </a>
+
+        </div>
+
+
+        <div class="projeto">
+
+            <h3>Windows Server 2022</h3>
+
+            <p>
+                Projeto de configuração de servidor web utilizando ambiente
+                Windows Server.
+            </p>
+
+            <p class="tecnologias">
+                Tecnologias: Windows Server | IIS | Servidor Web
+            </p>
+
+            <a
+                class="botao"
+                href="https://github.com/Sponge1774/servidor-web-windows-server-2022"
+                target="_blank">
+                Ver projeto
+            </a>
+
+        </div>
+
+
+        <div class="projeto">
+
+            <h3>Virtualização e Apache</h3>
+
+            <p>
+                Laboratório envolvendo virtualização, configuração de
+                clientes e servidor e implantação de Apache.
+            </p>
+
+            <p class="tecnologias">
+                Tecnologias: Virtualização | Linux | Apache
+            </p>
+
+            <a
+                class="botao"
+                href="https://github.com/Sponge1774/virtualization-lab-client-server-apache2"
+                target="_blank">
+                Ver projeto
+            </a>
+
+        </div>
+
 
     </div>
+
 </section>
+
 
 <section>
-    <h2>Contato</h2>
 
-    <p>
-        GitHub:
-        <a href="https://github.com/Sponge1774" target="_blank">
-            github.com/Sponge1774
-        </a>
-    </p>
+    <h2>Formação</h2>
 
-    <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/eduardosouzamattos2018/"
-           target="_blank">
-            Meu perfil no LinkedIn
-        </a>
-    </p>
+    <div class="formacao">
+
+        <h3>Análise e Desenvolvimento de Sistemas</h3>
+
+        <p>
+            Graduação tecnológica em andamento.
+        </p>
+
+        <br>
+
+        <p>
+            Estudos relacionados a programação, bancos de dados,
+            engenharia de software, redes, infraestrutura e tecnologia.
+        </p>
+
+    </div>
+
 </section>
 
+
+<section>
+
+    <h2>Contato</h2>
+
+    <div class="sobre">
+
+        <p>
+            GitHub:
+            <a
+                href="https://github.com/Sponge1774"
+                target="_blank">
+                github.com/Sponge1774
+            </a>
+        </p>
+
+        <br>
+
+        <p>
+            LinkedIn:
+            <a
+                href="https://www.linkedin.com/in/eduardosouzamattos2018/"
+                target="_blank">
+                Perfil profissional
+            </a>
+        </p>
+
+    </div>
+
+</section>
+
+
 <footer>
-    <p>© 2026 Eduardo Souza Mattos</p>
+
+    <p>
+        © 2026 Eduardo Souza Mattos
+    </p>
+
+    <p>
+        Portfólio profissional
+    </p>
+
 </footer>
 
+
 </body>
+
 </html>
+```

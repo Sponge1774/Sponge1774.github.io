@@ -46,8 +46,6 @@
             margin: 0 auto;
         }
 
-        /* MENU */
-
         nav {
             position: sticky;
             top: 0;
@@ -87,7 +85,38 @@
             color: white;
         }
 
-        /* HERO */
+        /* Seletor de idioma */
+
+        .language-switcher {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            white-space: nowrap;
+        }
+
+        .language-switcher button {
+            border: none;
+            background: transparent;
+            color: #cbd5e1;
+            cursor: pointer;
+            font-size: 0.82rem;
+            font-weight: bold;
+            padding: 5px 3px;
+        }
+
+        .language-switcher button:hover {
+            color: white;
+        }
+
+        .language-switcher button.active {
+            color: white;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .language-switcher span {
+            color: #64748b;
+        }
 
         header {
             color: white;
@@ -155,8 +184,6 @@
             border: 1px solid rgba(255,255,255,0.2);
         }
 
-        /* SEÇÕES */
-
         section {
             padding: 70px 0 0;
         }
@@ -179,8 +206,6 @@
             color: var(--dark);
         }
 
-        /* SOBRE */
-
         .sobre {
             background: var(--white);
             padding: 34px;
@@ -197,8 +222,6 @@
             margin-top: 18px;
         }
 
-        /* HABILIDADES */
-
         .habilidades {
             display: flex;
             flex-wrap: wrap;
@@ -214,8 +237,6 @@
             font-weight: bold;
             box-shadow: 0 4px 12px rgba(15,23,42,0.04);
         }
-
-        /* PROJETOS */
 
         .projetos {
             display: grid;
@@ -275,8 +296,6 @@
             background: var(--primary-dark);
         }
 
-        /* FORMAÇÃO */
-
         .formacao {
             background: var(--white);
             padding: 34px;
@@ -293,8 +312,6 @@
         .formacao p {
             color: var(--text-light);
         }
-
-        /* CONTATO */
 
         .contato-links {
             display: grid;
@@ -321,8 +338,6 @@
             font-weight: bold;
         }
 
-        /* RODAPÉ */
-
         footer {
             margin-top: 80px;
             padding: 38px 20px;
@@ -334,8 +349,6 @@
         footer strong {
             color: #e2e8f0;
         }
-
-        /* RESPONSIVIDADE */
 
         @media (max-width: 900px) {
 
@@ -353,6 +366,16 @@
 
             .nav-links {
                 display: none;
+            }
+
+            .nav-content {
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 12px 0;
+            }
+
+            .language-switcher {
+                margin-left: 8px;
             }
 
             header {
@@ -401,37 +424,66 @@
             <ul class="nav-links">
 
                 <li>
-                    <a href="#sobre">Sobre</a>
+                    <a href="#sobre" data-pt="Sobre" data-en="About">
+                        Sobre
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#habilidades">Habilidades</a>
+                    <a href="#habilidades" data-pt="Habilidades" data-en="Skills">
+                        Habilidades
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#projetos">Projetos</a>
+                    <a href="#projetos" data-pt="Projetos" data-en="Projects">
+                        Projetos
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#formacao">Formação</a>
+                    <a href="#formacao" data-pt="Formação" data-en="Education">
+                        Formação
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#contato">Contato</a>
+                    <a href="#contato" data-pt="Contato" data-en="Contact">
+                        Contato
+                    </a>
                 </li>
 
             </ul>
+
+            <div class="language-switcher">
+
+                <button type="button"
+                        id="btn-pt"
+                        onclick="setLanguage('pt')">
+                    PT-BR
+                </button>
+
+                <span>|</span>
+
+                <button type="button"
+                        id="btn-en"
+                        onclick="setLanguage('en')">
+                    EN
+                </button>
+
+            </div>
 
         </div>
 
     </nav>
 
-
     <header>
 
         <div class="hero">
 
-            <span class="eyebrow">
+            <span class="eyebrow"
+                  data-pt="PORTFÓLIO PROFISSIONAL"
+                  data-en="PROFESSIONAL PORTFOLIO">
                 PORTFÓLIO PROFISSIONAL
             </span>
 
@@ -439,7 +491,9 @@
                 Eduardo Souza Mattos
             </h1>
 
-            <p class="hero-subtitle">
+            <p class="hero-subtitle"
+               data-pt="Tecnologia da Informação · Análise de Dados · Python · SQL"
+               data-en="Information Technology · Data Analysis · Python · SQL">
                 Tecnologia da Informação · Análise de Dados · Python · SQL
             </p>
 
@@ -464,8 +518,9 @@
 
     </header>
 
-
     <main>
+
+        <!-- SOBRE -->
 
         <section id="sobre">
 
@@ -473,11 +528,14 @@
 
                 <div class="section-heading">
 
-                    <div class="section-kicker">
+                    <div class="section-kicker"
+                         data-pt="Perfil"
+                         data-en="Profile">
                         Perfil
                     </div>
 
-                    <h2>
+                    <h2 data-pt="Sobre mim"
+                        data-en="About me">
                         Sobre mim
                     </h2>
 
@@ -485,15 +543,18 @@
 
                 <div class="sobre">
 
-                    <p>
+                    <p data-pt="Profissional em transição de carreira para a área de Tecnologia da Informação, com experiência profissional em diferentes áreas de negócios e formação em Matemática e Recursos Humanos."
+                       data-en="Professional transitioning to the Information Technology field, with professional experience in different business areas and academic backgrounds in Mathematics and Human Resources.">
                         Profissional em transição de carreira para a área de Tecnologia da Informação, com experiência profissional em diferentes áreas de negócios e formação em Matemática e Recursos Humanos.
                     </p>
 
-                    <p>
+                    <p data-pt="Atualmente curso Análise e Desenvolvimento de Sistemas, desenvolvendo conhecimentos em programação, análise de dados, bancos de dados, redes, infraestrutura e cibersegurança."
+                       data-en="I am currently studying Systems Analysis and Development, developing knowledge in programming, data analysis, databases, networking, infrastructure, and cybersecurity.">
                         Atualmente curso Análise e Desenvolvimento de Sistemas, desenvolvendo conhecimentos em programação, análise de dados, bancos de dados, redes, infraestrutura e cibersegurança.
                     </p>
 
-                    <p>
+                    <p data-pt="Meu objetivo é aplicar conhecimentos técnicos e capacidade analítica na resolução de problemas e no desenvolvimento de soluções tecnológicas."
+                       data-en="My goal is to apply technical knowledge and analytical skills to problem-solving and the development of technology solutions.">
                         Meu objetivo é aplicar conhecimentos técnicos e capacidade analítica na resolução de problemas e no desenvolvimento de soluções tecnológicas.
                     </p>
 
@@ -503,6 +564,7 @@
 
         </section>
 
+        <!-- HABILIDADES -->
 
         <section id="habilidades">
 
@@ -510,11 +572,14 @@
 
                 <div class="section-heading">
 
-                    <div class="section-kicker">
+                    <div class="section-kicker"
+                         data-pt="Conhecimentos"
+                         data-en="Skills">
                         Conhecimentos
                     </div>
 
-                    <h2>
+                    <h2 data-pt="Habilidades"
+                        data-en="Skills">
                         Habilidades
                     </h2>
 
@@ -524,14 +589,41 @@
 
                     <span class="habilidade">Python</span>
                     <span class="habilidade">SQL</span>
-                    <span class="habilidade">Análise de Dados</span>
-                    <span class="habilidade">Banco de Dados</span>
+                    <span class="habilidade"
+                          data-pt="Análise de Dados"
+                          data-en="Data Analysis">
+                        Análise de Dados
+                    </span>
+
+                    <span class="habilidade"
+                          data-pt="Banco de Dados"
+                          data-en="Databases">
+                        Banco de Dados
+                    </span>
+
                     <span class="habilidade">Git &amp; GitHub</span>
-                    <span class="habilidade">Redes</span>
+
+                    <span class="habilidade"
+                          data-pt="Redes"
+                          data-en="Networking">
+                        Redes
+                    </span>
+
                     <span class="habilidade">Linux</span>
+
                     <span class="habilidade">Windows Server</span>
-                    <span class="habilidade">Virtualização</span>
-                    <span class="habilidade">Cibersegurança</span>
+
+                    <span class="habilidade"
+                          data-pt="Virtualização"
+                          data-en="Virtualization">
+                        Virtualização
+                    </span>
+
+                    <span class="habilidade"
+                          data-pt="Cibersegurança"
+                          data-en="Cybersecurity">
+                        Cibersegurança
+                    </span>
 
                 </div>
 
@@ -539,6 +631,7 @@
 
         </section>
 
+        <!-- PROJETOS -->
 
         <section id="projetos">
 
@@ -546,11 +639,14 @@
 
                 <div class="section-heading">
 
-                    <div class="section-kicker">
+                    <div class="section-kicker"
+                         data-pt="Portfólio"
+                         data-en="Portfolio">
                         Portfólio
                     </div>
 
-                    <h2>
+                    <h2 data-pt="Projetos"
+                        data-en="Projects">
                         Projetos
                     </h2>
 
@@ -558,14 +654,15 @@
 
                 <div class="projetos">
 
-
                     <div class="projeto">
 
-                        <h3>
+                        <h3 data-pt="Sistema de Controle de Estoque"
+                            data-en="Inventory Control System">
                             Sistema de Controle de Estoque
                         </h3>
 
-                        <p>
+                        <p data-pt="Sistema desenvolvido para controle e gerenciamento de produtos e estoque."
+                           data-en="System developed for product and inventory control and management.">
                             Sistema desenvolvido para controle e gerenciamento de produtos e estoque.
                         </p>
 
@@ -576,20 +673,23 @@
                         <a class="botao"
                            href="https://github.com/Sponge1774/SISTEMA-DE-CONTROLE-DE-ESTOQUE"
                            target="_blank"
-                           rel="noopener noreferrer">
+                           rel="noopener noreferrer"
+                           data-pt="Ver projeto"
+                           data-en="View project">
                             Ver projeto
                         </a>
 
                     </div>
 
-
                     <div class="projeto">
 
-                        <h3>
+                        <h3 data-pt="Modelagem de Dados — Ciclo de Vendas"
+                            data-en="Data Modeling — Sales Cycle">
                             Modelagem de Dados — Ciclo de Vendas
                         </h3>
 
-                        <p>
+                        <p data-pt="Projeto de modelagem e implementação de banco de dados para um cenário de vendas de supermercado."
+                           data-en="Database modeling and implementation project for a supermarket sales scenario.">
                             Projeto de modelagem e implementação de banco de dados para um cenário de vendas de supermercado.
                         </p>
 
@@ -600,20 +700,23 @@
                         <a class="botao"
                            href="https://github.com/Sponge1774/modelagem_dados_ciclo_vendas_supermercado_sql"
                            target="_blank"
-                           rel="noopener noreferrer">
+                           rel="noopener noreferrer"
+                           data-pt="Ver projeto"
+                           data-en="View project">
                             Ver projeto
                         </a>
 
                     </div>
 
-
                     <div class="projeto">
 
-                        <h3>
+                        <h3 data-pt="Cibersegurança"
+                            data-en="Cybersecurity">
                             Cibersegurança
                         </h3>
 
-                        <p>
+                        <p data-pt="Estudos e atividades práticas relacionados à segurança da informação, redes e análise de vulnerabilidades."
+                           data-en="Studies and practical activities related to information security, networking, and vulnerability analysis.">
                             Estudos e atividades práticas relacionados à segurança da informação, redes e análise de vulnerabilidades.
                         </p>
 
@@ -624,20 +727,23 @@
                         <a class="botao"
                            href="https://github.com/Sponge1774/cyber-security-tsti-unifecaf"
                            target="_blank"
-                           rel="noopener noreferrer">
+                           rel="noopener noreferrer"
+                           data-pt="Ver projeto"
+                           data-en="View project">
                             Ver projeto
                         </a>
 
                     </div>
 
-
                     <div class="projeto">
 
-                        <h3>
+                        <h3 data-pt="Redes de Computadores"
+                            data-en="Computer Networking">
                             Redes de Computadores
                         </h3>
 
-                        <p>
+                        <p data-pt="Projeto relacionado à infraestrutura de redes para ambiente de varejo, incluindo controle de estoque e CFTV."
+                           data-en="Project focused on network infrastructure for a retail environment, including inventory control and CCTV.">
                             Projeto relacionado à infraestrutura de redes para ambiente de varejo, incluindo controle de estoque e CFTV.
                         </p>
 
@@ -648,20 +754,23 @@
                         <a class="botao"
                            href="https://github.com/Sponge1774/computer_network_projeto_de_redes_loja_varejo_controle_estoque_CFTV"
                            target="_blank"
-                           rel="noopener noreferrer">
+                           rel="noopener noreferrer"
+                           data-pt="Ver projeto"
+                           data-en="View project">
                             Ver projeto
                         </a>
 
                     </div>
 
-
                     <div class="projeto">
 
-                        <h3>
+                        <h3 data-pt="Windows Server 2022"
+                            data-en="Windows Server 2022">
                             Windows Server 2022
                         </h3>
 
-                        <p>
+                        <p data-pt="Projeto de configuração de servidor web utilizando ambiente Windows Server."
+                           data-en="Web server configuration project using a Windows Server environment.">
                             Projeto de configuração de servidor web utilizando ambiente Windows Server.
                         </p>
 
@@ -672,20 +781,23 @@
                         <a class="botao"
                            href="https://github.com/Sponge1774/servidor-web-windows-server-2022"
                            target="_blank"
-                           rel="noopener noreferrer">
+                           rel="noopener noreferrer"
+                           data-pt="Ver projeto"
+                           data-en="View project">
                             Ver projeto
                         </a>
 
                     </div>
 
-
                     <div class="projeto">
 
-                        <h3>
+                        <h3 data-pt="Virtualização e Apache"
+                            data-en="Virtualization and Apache">
                             Virtualização e Apache
                         </h3>
 
-                        <p>
+                        <p data-pt="Laboratório envolvendo virtualização, configuração de clientes e servidor e implantação de Apache."
+                           data-en="Laboratory involving virtualization, client and server configuration, and Apache deployment.">
                             Laboratório envolvendo virtualização, configuração de clientes e servidor e implantação de Apache.
                         </p>
 
@@ -696,12 +808,13 @@
                         <a class="botao"
                            href="https://github.com/Sponge1774/virtualization-lab-client-server-apache2"
                            target="_blank"
-                           rel="noopener noreferrer">
+                           rel="noopener noreferrer"
+                           data-pt="Ver projeto"
+                           data-en="View project">
                             Ver projeto
                         </a>
 
                     </div>
-
 
                 </div>
 
@@ -709,6 +822,7 @@
 
         </section>
 
+        <!-- FORMAÇÃO -->
 
         <section id="formacao">
 
@@ -716,11 +830,14 @@
 
                 <div class="section-heading">
 
-                    <div class="section-kicker">
+                    <div class="section-kicker"
+                         data-pt="Educação"
+                         data-en="Education">
                         Educação
                     </div>
 
-                    <h2>
+                    <h2 data-pt="Formação"
+                        data-en="Education">
                         Formação
                     </h2>
 
@@ -728,15 +845,18 @@
 
                 <div class="formacao">
 
-                    <h3>
+                    <h3 data-pt="Análise e Desenvolvimento de Sistemas"
+                        data-en="Systems Analysis and Development">
                         Análise e Desenvolvimento de Sistemas
                     </h3>
 
-                    <p>
+                    <p data-pt="Graduação tecnológica em andamento."
+                       data-en="Technology degree in progress.">
                         Graduação tecnológica em andamento.
                     </p>
 
-                    <p>
+                    <p data-pt="Estudos relacionados a programação, bancos de dados, engenharia de software, redes, infraestrutura e tecnologia."
+                       data-en="Studies related to programming, databases, software engineering, networking, infrastructure, and technology.">
                         Estudos relacionados a programação, bancos de dados, engenharia de software, redes, infraestrutura e tecnologia.
                     </p>
 
@@ -746,6 +866,7 @@
 
         </section>
 
+        <!-- CONTATO -->
 
         <section id="contato">
 
@@ -753,18 +874,20 @@
 
                 <div class="section-heading">
 
-                    <div class="section-kicker">
+                    <div class="section-kicker"
+                         data-pt="Conecte-se"
+                         data-en="Connect">
                         Conecte-se
                     </div>
 
-                    <h2>
+                    <h2 data-pt="Contato"
+                        data-en="Contact">
                         Contato
                     </h2>
 
                 </div>
 
                 <div class="contato-links">
-
 
                     <div class="contato-item">
 
@@ -780,7 +903,6 @@
 
                     </div>
 
-
                     <div class="contato-item">
 
                         <strong>
@@ -790,11 +912,13 @@
                         <a href="https://www.linkedin.com/in/eduardosouzamattos2018/"
                            target="_blank"
                            rel="noopener noreferrer">
-                            Perfil profissional
+                            <span data-pt="Perfil profissional"
+                                  data-en="Professional profile">
+                                Perfil profissional
+                            </span>
                         </a>
 
                     </div>
-
 
                 </div>
 
@@ -804,11 +928,15 @@
 
     </main>
 
-
     <footer>
 
         <p>
-            <strong>Eduardo Souza Mattos</strong> · Portfólio profissional
+            <strong>Eduardo Souza Mattos</strong>
+
+            <span data-pt=" · Portfólio profissional"
+                  data-en=" · Professional portfolio">
+                · Portfólio profissional
+            </span>
         </p>
 
         <p>
@@ -816,6 +944,58 @@
         </p>
 
     </footer>
+
+    <script>
+
+        function setLanguage(language) {
+
+            const elements = document.querySelectorAll("[data-pt][data-en]");
+
+            elements.forEach(function(element) {
+
+                element.textContent = element.getAttribute(
+                    "data-" + language
+                );
+
+            });
+
+            document.documentElement.lang =
+                language === "pt" ? "pt-BR" : "en";
+
+            document.getElementById("btn-pt")
+                .classList.toggle("active", language === "pt");
+
+            document.getElementById("btn-en")
+                .classList.toggle("active", language === "en");
+
+            if (language === "en") {
+
+                document.title =
+                    "Eduardo Souza Mattos | Portfolio";
+
+            } else {
+
+                document.title =
+                    "Eduardo Souza Mattos | Portfólio";
+
+            }
+
+            localStorage.setItem(
+                "portfolioLanguage",
+                language
+            );
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+
+            const savedLanguage =
+                localStorage.getItem("portfolioLanguage") || "pt";
+
+            setLanguage(savedLanguage);
+
+        });
+
+    </script>
 
 </body>
 </html>

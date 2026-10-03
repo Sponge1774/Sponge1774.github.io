@@ -1,271 +1,821 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Portfólio profissional de Eduardo Souza Mattos — Tecnologia da Informação, Análise de Dados, Python e SQL.">
-<title>Eduardo Souza Mattos | Portfólio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-:root{
-    --bg:#f6f8fc;
-    --surface:#ffffff;
-    --surface-soft:#eef3ff;
-    --text:#172033;
-    --primary:#2563eb;
-    --primary-dark:#1d4ed8;
-    --border:#e2e8f0;
-    --dark:#0f172a;
-    --shadow:0 12px 30px rgba(15,23,42,.08);
-    --radius:18px;
-}
+    <meta name="description" content="Portfólio profissional de Eduardo Souza Mattos - Tecnologia da Informação, Análise de Dados, Python e SQL.">
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
+    <title>Eduardo Souza Mattos | Portfólio</title>
 
-html{
-    scroll-behavior:smooth;
-}
+    <style>
 
-body{
-    font-family:Inter,"Segoe UI",Arial,Helvetica,sans-serif;
-    line-height:1.7;
-    background:var(--bg);
-    color:var(--text);
-}
+        :root {
+            --background: #f6f8fc;
+            --white: #ffffff;
+            --dark: #0f172a;
+            --text: #172033;
+            --text-light: #64748b;
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --border: #e2e8f0;
+            --soft-blue: #eef3ff;
+            --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+            --radius: 18px;
+        }
 
-.container{
-    width:min(1120px,calc(100% - 40px));
-    margin:0 auto;
-}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-/* MENU */
+        html {
+            scroll-behavior: smooth;
+        }
 
-nav{
-    position:sticky;
-    top:0;
-    z-index:100;
-    background:rgba(15,23,42,.94);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid rgba(255,255,255,.08);
-}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            background: var(--background);
+            color: var(--text);
+        }
 
-.nav-content{
-    min-height:68px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-}
+        .container {
+            width: min(1120px, calc(100% - 40px));
+            margin: 0 auto;
+        }
 
-.logo{
-    color:#fff;
-    text-decoration:none;
-    font-weight:800;
-    letter-spacing:.3px;
-}
+        /* MENU */
 
-.nav-links{
-    display:flex;
-    gap:22px;
-    list-style:none;
-}
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--dark);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
 
-.nav-links a{
-    color:#cbd5e1;
-    text-decoration:none;
-    font-size:.92rem;
-    transition:color .2s;
-}
+        .nav-content {
+            min-height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
 
-.nav-links a:hover{
-    color:#fff;
-}
+        .logo {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+        }
 
-/* CABEÇALHO */
+        .nav-links {
+            display: flex;
+            gap: 22px;
+            list-style: none;
+        }
 
-header{
-    color:#fff;
-    padding:96px 20px 90px;
-    background:
-        radial-gradient(circle at 15% 20%,rgba(37,99,235,.42),transparent 32%),
-        radial-gradient(circle at 85% 70%,rgba(6,182,212,.24),transparent 30%),
-        linear-gradient(135deg,#0f172a,#172554 55%,#0f172a);
-}
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.92rem;
+        }
 
-.hero{
-    max-width:900px;
-    margin:0 auto;
-    text-align:center;
-}
+        .nav-links a:hover {
+            color: white;
+        }
 
-.eyebrow{
-    display:inline-block;
-    padding:7px 14px;
-    margin-bottom:20px;
-    border:1px solid rgba(255,255,255,.18);
-    border-radius:999px;
-    background:rgba(255,255,255,.07);
-    color:#bfdbfe;
-    font-size:.85rem;
-    font-weight:700;
-    letter-spacing:.4px;
-}
+        /* HERO */
 
-header h1{
-    font-size:clamp(2.4rem,6vw,4.5rem);
-    line-height:1.08;
-    margin-bottom:20px;
-    letter-spacing:-1.8px;
-}
+        header {
+            color: white;
+            padding: 100px 20px 90px;
+            text-align: center;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(37,99,235,0.45), transparent 32%),
+                radial-gradient(circle at 85% 70%, rgba(6,182,212,0.25), transparent 30%),
+                linear-gradient(135deg, #0f172a, #172554, #0f172a);
+        }
 
-.hero-subtitle{
-    max-width:760px;
-    margin:0 auto 30px;
-    color:#cbd5e1;
-    font-size:clamp(1rem,2.5vw,1.25rem);
-}
+        .hero {
+            max-width: 900px;
+            margin: auto;
+        }
 
-.links{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:12px;
-}
+        .eyebrow {
+            display: inline-block;
+            padding: 7px 14px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 999px;
+            background: rgba(255,255,255,0.08);
+            color: #bfdbfe;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
 
-.links a,
-.botao{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
-    border-radius:10px;
-    font-weight:700;
-    transition:transform .2s,background .2s,box-shadow .2s;
-}
+        header h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
 
-.links a{
-    padding:12px 22px;
-    background:var(--primary);
-    color:#fff;
-    box-shadow:0 8px 20px rgba(37,99,235,.25);
-}
+        .hero-subtitle {
+            max-width: 760px;
+            margin: 0 auto 30px;
+            color: #cbd5e1;
+            font-size: 1.2rem;
+        }
 
-.links a.secondary{
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.18);
-}
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
 
-.links a:hover,
-.botao:hover{
-    transform:translateY(-2px);
-}
+        .hero-buttons a {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            background: var(--primary);
+            color: white;
+        }
 
-.links a:hover{
-    background:var(--primary-dark);
-}
+        .hero-buttons a:hover {
+            background: var(--primary-dark);
+        }
 
-/* SEÇÕES */
+        .hero-buttons .secondary {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
 
-section{
-    padding:68px 0 0;
-}
+        /* SEÇÕES */
 
-.section-heading{
-    margin-bottom:28px;
-}
+        section {
+            padding: 70px 0 0;
+        }
 
-.section-kicker{
-    color:var(--primary);
-    font-size:.78rem;
-    font-weight:800;
-    text-transform:uppercase;
-    letter-spacing:1.5px;
-    margin-bottom:6px;
-}
+        .section-heading {
+            margin-bottom: 28px;
+        }
 
-section h2{
-    font-size:clamp(1.7rem,4vw,2.25rem);
-    line-height:1.2;
-    color:var(--dark);
-}
+        .section-kicker {
+            color: var(--primary);
+            font-size: 0.78rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 6px;
+        }
 
-/* SOBRE / FORMAÇÃO */
+        section h2 {
+            font-size: 2.2rem;
+            color: var(--dark);
+        }
 
-.sobre,
-.formacao{
-    background:var(--surface);
-    padding:34px;
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-}
+        /* SOBRE */
 
-.sobre p{
-    color:#475569;
-}
+        .sobre {
+            background: var(--white);
+            padding: 34px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
 
-.sobre p+p{
-    margin-top:18px;
-}
+        .sobre p {
+            color: #475569;
+        }
 
-.formacao h3{
-    color:var(--dark);
-    margin-bottom:8px;
-}
+        .sobre p + p {
+            margin-top: 18px;
+        }
 
-.formacao p{
-    color:#64748b;
-}
+        /* HABILIDADES */
 
-/* HABILIDADES */
+        .habilidades {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 11px;
+        }
 
-.habilidades{
-    display:flex;
-    flex-wrap:wrap;
-    gap:11px;
-}
+        .habilidade {
+            padding: 10px 16px;
+            border: 1px solid #dbe5f5;
+            border-radius: 999px;
+            background: var(--white);
+            color: #334155;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(15,23,42,0.04);
+        }
 
-.habilidade{
-    padding:10px 16px;
-    border:1px solid #dbe5f5;
-    border-radius:999px;
-    background:var(--surface);
-    color:#334155;
-    font-weight:700;
-    box-shadow:0 4px 12px rgba(15,23,42,.04);
-    transition:transform .2s,border-color .2s;
-}
+        /* PROJETOS */
 
-.habilidade:hover{
-    transform:translateY(-2px);
-    border-color:#93c5fd;
-}
+        .projetos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
 
-/* PROJETOS */
+        .projeto {
+            display: flex;
+            flex-direction: column;
+            min-height: 300px;
+            padding: 28px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
 
-.projetos{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
+        .projeto:hover {
+            transform: translateY(-5px);
+            border-color: #bfdbfe;
+        }
 
-.projeto{
-    display:flex;
-    flex-direction:column;
-    min-height:300px;
-    background:var(--surface);
-    padding:28px;
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    transition:transform .22s,box-shadow .22s,border-color .22s;
-}
+        .projeto h3 {
+            margin-bottom: 12px;
+            color: var(--dark);
+            font-size: 1.15rem;
+            line-height: 1.35;
+        }
 
-.projeto:hover{
-    transform:translateY(-6px);
-    border-color:#b
-```
+        .projeto p {
+            color: var(--text-light);
+        }
+
+        .tecnologias {
+            margin-top: auto;
+            padding-top: 20px;
+            color: var(--primary) !important;
+            font-size: 0.86rem;
+            font-weight: bold;
+        }
+
+        .botao {
+            display: inline-block;
+            align-self: flex-start;
+            margin-top: 16px;
+            padding: 10px 17px;
+            border-radius: 10px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .botao:hover {
+            background: var(--primary-dark);
+        }
+
+        /* FORMAÇÃO */
+
+        .formacao {
+            background: var(--white);
+            padding: 34px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .formacao h3 {
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .formacao p {
+            color: var(--text-light);
+        }
+
+        /* CONTATO */
+
+        .contato-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .contato-item {
+            padding: 20px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: var(--soft-blue);
+        }
+
+        .contato-item strong {
+            display: block;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .contato-item a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            margin-top: 80px;
+            padding: 38px 20px;
+            background: var(--dark);
+            color: #94a3b8;
+            text-align: center;
+        }
+
+        footer strong {
+            color: #e2e8f0;
+        }
+
+        /* RESPONSIVIDADE */
+
+        @media (max-width: 900px) {
+
+            .projetos {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 650px) {
+
+            .container {
+                width: calc(100% - 28px);
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            header {
+                padding: 75px 14px 70px;
+            }
+
+            section {
+                padding-top: 52px;
+            }
+
+            .projetos,
+            .contato-links {
+                grid-template-columns: 1fr;
+            }
+
+            .sobre,
+            .formacao,
+            .projeto {
+                padding: 24px;
+            }
+
+            .hero-buttons a {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            section h2 {
+                font-size: 1.9rem;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="container nav-content">
+
+            <a class="logo" href="#">
+                Eduardo Souza Mattos
+            </a>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#sobre">Sobre</a>
+                </li>
+
+                <li>
+                    <a href="#habilidades">Habilidades</a>
+                </li>
+
+                <li>
+                    <a href="#projetos">Projetos</a>
+                </li>
+
+                <li>
+                    <a href="#formacao">Formação</a>
+                </li>
+
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <header>
+
+        <div class="hero">
+
+            <span class="eyebrow">
+                PORTFÓLIO PROFISSIONAL
+            </span>
+
+            <h1>
+                Eduardo Souza Mattos
+            </h1>
+
+            <p class="hero-subtitle">
+                Tecnologia da Informação · Análise de Dados · Python · SQL
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="https://github.com/Sponge1774"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    GitHub
+                </a>
+
+                <a class="secondary"
+                   href="https://www.linkedin.com/in/eduardosouzamattos2018/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section id="sobre">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="section-kicker">
+                        Perfil
+                    </div>
+
+                    <h2>
+                        Sobre mim
+                    </h2>
+
+                </div>
+
+                <div class="sobre">
+
+                    <p>
+                        Profissional em transição de carreira para a área de Tecnologia da Informação, com experiência profissional em diferentes áreas de negócios e formação em Matemática e Recursos Humanos.
+                    </p>
+
+                    <p>
+                        Atualmente curso Análise e Desenvolvimento de Sistemas, desenvolvendo conhecimentos em programação, análise de dados, bancos de dados, redes, infraestrutura e cibersegurança.
+                    </p>
+
+                    <p>
+                        Meu objetivo é aplicar conhecimentos técnicos e capacidade analítica na resolução de problemas e no desenvolvimento de soluções tecnológicas.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="habilidades">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="section-kicker">
+                        Conhecimentos
+                    </div>
+
+                    <h2>
+                        Habilidades
+                    </h2>
+
+                </div>
+
+                <div class="habilidades">
+
+                    <span class="habilidade">Python</span>
+                    <span class="habilidade">SQL</span>
+                    <span class="habilidade">Análise de Dados</span>
+                    <span class="habilidade">Banco de Dados</span>
+                    <span class="habilidade">Git &amp; GitHub</span>
+                    <span class="habilidade">Redes</span>
+                    <span class="habilidade">Linux</span>
+                    <span class="habilidade">Windows Server</span>
+                    <span class="habilidade">Virtualização</span>
+                    <span class="habilidade">Cibersegurança</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="projetos">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="section-kicker">
+                        Portfólio
+                    </div>
+
+                    <h2>
+                        Projetos
+                    </h2>
+
+                </div>
+
+                <div class="projetos">
+
+
+                    <div class="projeto">
+
+                        <h3>
+                            Sistema de Controle de Estoque
+                        </h3>
+
+                        <p>
+                            Sistema desenvolvido para controle e gerenciamento de produtos e estoque.
+                        </p>
+
+                        <p class="tecnologias">
+                            Python
+                        </p>
+
+                        <a class="botao"
+                           href="https://github.com/Sponge1774/SISTEMA-DE-CONTROLE-DE-ESTOQUE"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Ver projeto
+                        </a>
+
+                    </div>
+
+
+                    <div class="projeto">
+
+                        <h3>
+                            Modelagem de Dados — Ciclo de Vendas
+                        </h3>
+
+                        <p>
+                            Projeto de modelagem e implementação de banco de dados para um cenário de vendas de supermercado.
+                        </p>
+
+                        <p class="tecnologias">
+                            SQL · MySQL · Modelagem de Dados
+                        </p>
+
+                        <a class="botao"
+                           href="https://github.com/Sponge1774/modelagem_dados_ciclo_vendas_supermercado_sql"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Ver projeto
+                        </a>
+
+                    </div>
+
+
+                    <div class="projeto">
+
+                        <h3>
+                            Cibersegurança
+                        </h3>
+
+                        <p>
+                            Estudos e atividades práticas relacionados à segurança da informação, redes e análise de vulnerabilidades.
+                        </p>
+
+                        <p class="tecnologias">
+                            Linux · Redes · Segurança
+                        </p>
+
+                        <a class="botao"
+                           href="https://github.com/Sponge1774/cyber-security-tsti-unifecaf"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Ver projeto
+                        </a>
+
+                    </div>
+
+
+                    <div class="projeto">
+
+                        <h3>
+                            Redes de Computadores
+                        </h3>
+
+                        <p>
+                            Projeto relacionado à infraestrutura de redes para ambiente de varejo, incluindo controle de estoque e CFTV.
+                        </p>
+
+                        <p class="tecnologias">
+                            Redes · CFTV · Infraestrutura
+                        </p>
+
+                        <a class="botao"
+                           href="https://github.com/Sponge1774/computer_network_projeto_de_redes_loja_varejo_controle_estoque_CFTV"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Ver projeto
+                        </a>
+
+                    </div>
+
+
+                    <div class="projeto">
+
+                        <h3>
+                            Windows Server 2022
+                        </h3>
+
+                        <p>
+                            Projeto de configuração de servidor web utilizando ambiente Windows Server.
+                        </p>
+
+                        <p class="tecnologias">
+                            Windows Server · IIS · Servidor Web
+                        </p>
+
+                        <a class="botao"
+                           href="https://github.com/Sponge1774/servidor-web-windows-server-2022"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Ver projeto
+                        </a>
+
+                    </div>
+
+
+                    <div class="projeto">
+
+                        <h3>
+                            Virtualização e Apache
+                        </h3>
+
+                        <p>
+                            Laboratório envolvendo virtualização, configuração de clientes e servidor e implantação de Apache.
+                        </p>
+
+                        <p class="tecnologias">
+                            Virtualização · Linux · Apache
+                        </p>
+
+                        <a class="botao"
+                           href="https://github.com/Sponge1774/virtualization-lab-client-server-apache2"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Ver projeto
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="formacao">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="section-kicker">
+                        Educação
+                    </div>
+
+                    <h2>
+                        Formação
+                    </h2>
+
+                </div>
+
+                <div class="formacao">
+
+                    <h3>
+                        Análise e Desenvolvimento de Sistemas
+                    </h3>
+
+                    <p>
+                        Graduação tecnológica em andamento.
+                    </p>
+
+                    <p>
+                        Estudos relacionados a programação, bancos de dados, engenharia de software, redes, infraestrutura e tecnologia.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="contato">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="section-kicker">
+                        Conecte-se
+                    </div>
+
+                    <h2>
+                        Contato
+                    </h2>
+
+                </div>
+
+                <div class="contato-links">
+
+
+                    <div class="contato-item">
+
+                        <strong>
+                            GitHub
+                        </strong>
+
+                        <a href="https://github.com/Sponge1774"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            github.com/Sponge1774
+                        </a>
+
+                    </div>
+
+
+                    <div class="contato-item">
+
+                        <strong>
+                            LinkedIn
+                        </strong>
+
+                        <a href="https://www.linkedin.com/in/eduardosouzamattos2018/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Perfil profissional
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            <strong>Eduardo Souza Mattos</strong> · Portfólio profissional
+        </p>
+
+        <p>
+            © 2026
+        </p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,17 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Portfólio profissional de Eduardo Souza Mattos - Tecnologia da Informação, Análise de Dados, Python e SQL.">
+    <title>Eduardo Souza Mattos | Portfólio de Tecnologia, Dados e Python</title>
 
-    <title>Eduardo Souza Mattos | Portfólio</title>
+    <meta
+        name="description"
+        content="Portfólio profissional de Eduardo Souza Mattos, estudante de Análise e Desenvolvimento de Sistemas, com projetos em análise de dados, Python, SQL, bancos de dados, redes, cibersegurança e infraestrutura de TI."
+    >
+
+    <meta
+        name="keywords"
+        content="Eduardo Souza Mattos, análise de dados, analista de dados, Python, SQL, MySQL, banco de dados, tecnologia, TI, ADS, cibersegurança, redes de computadores, Windows Server, virtualização"
+    >
+
+    <meta name="author" content="Eduardo Souza Mattos">
+
+    <meta name="robots" content="index, follow">
+
+    <link
+        rel="canonical"
+        href="https://sponge1774.github.io/"
+    >
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sponge1774.github.io/">
+    <meta
+        property="og:title"
+        content="Eduardo Souza Mattos | Portfólio de Tecnologia, Dados e Python"
+    >
+    <meta
+        property="og:description"
+        content="Portfólio de projetos em análise de dados, Python, SQL, bancos de dados, redes, cibersegurança e infraestrutura de TI."
+    >
+    <meta property="og:site_name" content="Eduardo Souza Mattos | Portfólio">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta
+        name="twitter:title"
+        content="Eduardo Souza Mattos | Portfólio de Tecnologia e Dados"
+    >
+    <meta
+        name="twitter:description"
+        content="Projetos práticos em análise de dados, Python, SQL, bancos de dados, redes, cibersegurança e infraestrutura de TI."
+    >
 
     <style>
 
@@ -30,9 +68,9 @@
         }
 
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         html {
@@ -42,38 +80,40 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.7;
             background: var(--background);
             color: var(--text);
+            line-height: 1.6;
             overflow-x: hidden;
         }
 
-        a,
-        button {
-            -webkit-tap-highlight-color: transparent;
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
         }
 
         .container {
-            width: min(1120px, calc(100% - 40px));
+            width: min(1120px, 92%);
             margin: 0 auto;
         }
 
-        /* =========================
-           NAVEGAÇÃO
-        ========================= */
+        /* NAVBAR */
 
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(15, 23, 42, 0.96);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
         }
 
-        .nav-content {
-            min-height: 68px;
+        .nav-container {
+            min-height: 72px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -81,369 +121,280 @@
         }
 
         .logo {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1rem;
-            transition: opacity 0.25s ease;
-        }
-
-        .logo:hover {
-            opacity: 0.8;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--dark);
         }
 
         .nav-links {
             display: flex;
+            align-items: center;
             gap: 22px;
-            list-style: none;
         }
 
         .nav-links a {
-            position: relative;
-            color: #cbd5e1;
-            text-decoration: none;
-            font-size: 0.92rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-light);
             transition: color 0.25s ease;
         }
 
-        .nav-links a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -6px;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: width 0.25s ease;
-        }
-
         .nav-links a:hover {
-            color: white;
+            color: var(--primary);
         }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* =========================
-           IDIOMAS
-        ========================= */
 
         .language-switcher {
             display: flex;
             align-items: center;
-            gap: 7px;
-            white-space: nowrap;
+            gap: 6px;
         }
 
         .language-switcher button {
-            border: none;
-            background: transparent;
-            color: #cbd5e1;
+            border: 1px solid var(--border);
+            background: var(--white);
+            color: var(--text-light);
+            padding: 6px 10px;
+            border-radius: 8px;
             cursor: pointer;
-            font-size: 0.82rem;
-            font-weight: bold;
-            padding: 5px 3px;
-            transition:
-                color 0.25s ease,
-                transform 0.25s ease;
+            font-weight: 600;
+            transition: all 0.25s ease;
         }
 
-        .language-switcher button:hover {
-            color: white;
-            transform: translateY(-1px);
-        }
-
+        .language-switcher button:hover,
         .language-switcher button.active {
-            color: white;
-            text-decoration: underline;
-            text-underline-offset: 4px;
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
         }
 
-        .language-switcher span {
-            color: #64748b;
-        }
+        /* HERO */
 
-        /* =========================
-           HERO
-        ========================= */
-
-        header {
-            color: white;
-            padding: 100px 20px 90px;
-            text-align: center;
+        .hero {
+            min-height: 78vh;
+            display: flex;
+            align-items: center;
             background:
                 radial-gradient(
-                    circle at 15% 20%,
-                    rgba(37,99,235,0.45),
-                    transparent 32%
-                ),
-                radial-gradient(
-                    circle at 85% 70%,
-                    rgba(6,182,212,0.25),
-                    transparent 30%
+                    circle at top right,
+                    rgba(37, 99, 235, 0.14),
+                    transparent 35%
                 ),
                 linear-gradient(
-                    135deg,
-                    #0f172a,
-                    #172554,
-                    #0f172a
+                    180deg,
+                    #ffffff 0%,
+                    #f6f8fc 100%
                 );
         }
 
-        .hero {
-            max-width: 900px;
-            margin: auto;
+        .hero-content {
+            max-width: 800px;
             animation: heroEnter 0.8s ease both;
         }
 
         @keyframes heroEnter {
-
             from {
                 opacity: 0;
-                transform: translateY(18px);
+                transform: translateY(25px);
             }
 
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
-
         }
 
-        .eyebrow {
-            display: inline-block;
-            padding: 7px 14px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 999px;
-            background: rgba(255,255,255,0.08);
-            color: #bfdbfe;
-            font-size: 0.85rem;
-            font-weight: bold;
-        }
-
-        header h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            line-height: 1.1;
+        .hero h1 {
+            font-size: clamp(2.4rem, 6vw, 4.6rem);
+            line-height: 1.05;
+            color: var(--dark);
             margin-bottom: 20px;
         }
 
-        .hero-subtitle {
-            max-width: 760px;
-            margin: 0 auto 30px;
-            color: #cbd5e1;
-            font-size: 1.2rem;
+        .hero h2 {
+            font-size: clamp(1.2rem, 2.5vw, 1.65rem);
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 720px;
+            font-size: 1.08rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
         }
 
         .hero-buttons {
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
             gap: 12px;
         }
 
-        .hero-buttons a {
-            display: inline-block;
-            padding: 12px 22px;
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
             border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            background: var(--primary);
-            color: white;
-            transition:
-                background 0.25s ease,
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
+            font-weight: 700;
+            transition: all 0.25s ease;
         }
 
-        .hero-buttons a:hover {
+        .button-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .button-primary:hover {
             background: var(--primary-dark);
             transform: translateY(-2px);
-            box-shadow: 0 8px 18px rgba(37,99,235,0.25);
+            box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
         }
 
-        .hero-buttons .secondary {
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.2);
+        .button-secondary {
+            background: var(--white);
+            border: 1px solid var(--border);
+            color: var(--dark);
         }
 
-        /* =========================
-           SEÇÕES
-        ========================= */
+        .button-secondary:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* SECTIONS */
 
         section {
             padding: 70px 0 0;
             scroll-margin-top: 85px;
         }
 
-        .section-heading {
-            margin-bottom: 28px;
-        }
-
-        .section-kicker {
-            color: var(--primary);
-            font-size: 0.78rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 6px;
-        }
-
-        section h2 {
-            font-size: 2.2rem;
+        .section-title {
+            font-size: 2rem;
             color: var(--dark);
+            margin-bottom: 14px;
         }
 
-        /* =========================
-           SOBRE
-        ========================= */
+        .section-subtitle {
+            color: var(--text-light);
+            max-width: 760px;
+            margin-bottom: 30px;
+        }
+
+        /* SOBRE */
 
         .sobre {
             background: var(--white);
-            padding: 34px;
-            border: 1px solid var(--border);
+            padding: 32px;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
-            transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
         .sobre:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 16px 34px rgba(15,23,42,0.10);
+            transform: translateY(-4px);
+            box-shadow: 0 18px 35px rgba(15, 23, 42, 0.1);
         }
 
-        .sobre p {
-            color: #475569;
-        }
+        /* HABILIDADES */
 
-        .sobre p + p {
-            margin-top: 18px;
-        }
-
-        /* =========================
-           HABILIDADES
-        ========================= */
-
-        .habilidades {
+        .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 11px;
+            gap: 10px;
         }
 
-        .habilidade {
-            padding: 10px 16px;
-            border: 1px solid #dbe5f5;
+        .skill {
+            background: var(--soft-blue);
+            color: var(--primary-dark);
+            border: 1px solid #dbe5ff;
+            padding: 9px 14px;
             border-radius: 999px;
-            background: var(--white);
-            color: #334155;
-            font-weight: bold;
-            box-shadow: 0 4px 12px rgba(15,23,42,0.04);
-            transition:
-                transform 0.25s ease,
-                border-color 0.25s ease,
-                box-shadow 0.25s ease;
+            font-weight: 600;
+            transition: all 0.25s ease;
         }
 
-        .habilidade:hover {
-            transform: translateY(-3px);
-            border-color: #bfdbfe;
-            box-shadow: 0 8px 18px rgba(15,23,42,0.08);
+        .skill:hover {
+            transform: translateY(-2px);
+            background: #e1eaff;
         }
 
-        /* =========================
-           PROJETOS
-        ========================= */
+        /* PROJETOS */
 
-        .projetos {
+        .projects-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 22px;
         }
 
         .projeto {
-            display: flex;
-            flex-direction: column;
-            min-height: 300px;
-            padding: 28px;
             background: var(--white);
             border: 1px solid var(--border);
             border-radius: var(--radius);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
             box-shadow: var(--shadow);
             transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease,
-                border-color 0.3s ease;
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
         }
 
         .projeto:hover {
             transform: translateY(-6px);
-            border-color: #bfdbfe;
-            box-shadow: 0 18px 38px rgba(15,23,42,0.12);
+            border-color: #cbd5e1;
+            box-shadow: 0 18px 35px rgba(15, 23, 42, 0.12);
         }
 
         .projeto h3 {
-            margin-bottom: 12px;
             color: var(--dark);
-            font-size: 1.15rem;
-            line-height: 1.35;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
         }
 
         .projeto p {
             color: var(--text-light);
+            margin-bottom: 18px;
+            flex-grow: 1;
         }
 
         .tecnologias {
-            margin-top: auto;
-            padding-top: 20px;
-            color: var(--primary) !important;
-            font-size: 0.86rem;
-            font-weight: bold;
-        }
-
-        .botao {
-            display: inline-block;
-            align-self: flex-start;
-            margin-top: 16px;
-            padding: 10px 17px;
-            border-radius: 10px;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
+            color: var(--primary);
             font-size: 0.9rem;
-            transition:
-                background 0.25s ease,
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
+            font-weight: 700;
+            margin-bottom: 20px;
         }
 
-        .botao:hover {
-            background: var(--primary-dark);
+        .project-button {
+            display: inline-block;
+            text-align: center;
+            background: var(--dark);
+            color: var(--white);
+            padding: 10px 14px;
+            border-radius: 9px;
+            font-weight: 700;
+            transition: all 0.25s ease;
+        }
+
+        .project-button:hover {
+            background: var(--primary);
             transform: translateY(-2px);
-            box-shadow: 0 7px 16px rgba(37,99,235,0.22);
         }
 
-        /* =========================
-           FORMAÇÃO
-        ========================= */
+        /* FORMAÇÃO */
 
         .formacao {
             background: var(--white);
-            padding: 34px;
             border: 1px solid var(--border);
+            padding: 28px;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
-            transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease;
+            transition: transform 0.25s ease;
         }
 
         .formacao:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 16px 34px rgba(15,23,42,0.10);
+            transform: translateY(-4px);
         }
 
         .formacao h3 {
@@ -455,153 +406,102 @@
             color: var(--text-light);
         }
 
-        .formacao p + p {
-            margin-top: 10px;
-        }
+        /* CONTATO */
 
-        /* =========================
-           CONTATO
-        ========================= */
-
-        .contato-links {
+        .contato-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
+            gap: 18px;
         }
 
         .contato-item {
-            padding: 20px;
+            background: var(--white);
             border: 1px solid var(--border);
-            border-radius: 14px;
-            background: var(--soft-blue);
+            padding: 24px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
             transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease,
-                border-color 0.3s ease;
+                transform 0.25s ease,
+                border-color 0.25s ease;
         }
 
         .contato-item:hover {
             transform: translateY(-4px);
-            border-color: #bfdbfe;
-            box-shadow: 0 12px 24px rgba(15,23,42,0.08);
+            border-color: #cbd5e1;
         }
 
         .contato-item strong {
             display: block;
             color: var(--dark);
-            margin-bottom: 5px;
+            margin-bottom: 6px;
         }
 
+        .contato-item span,
         .contato-item a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.25s ease;
+            color: var(--text-light);
         }
 
         .contato-item a:hover {
-            color: var(--primary-dark);
+            color: var(--primary);
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
+        /* FOOTER */
 
         footer {
             margin-top: 80px;
-            padding: 38px 20px;
+            padding: 30px 0;
             background: var(--dark);
-            color: #94a3b8;
+            color: #cbd5e1;
             text-align: center;
+            font-size: 0.9rem;
         }
 
-        footer strong {
-            color: #e2e8f0;
-        }
-
-        footer p + p {
-            margin-top: 5px;
-        }
-
-        /* =========================
-           RESPONSIVIDADE
-        ========================= */
+        /* RESPONSIVIDADE */
 
         @media (max-width: 900px) {
 
-            .projetos {
+            .projects-grid {
                 grid-template-columns: repeat(2, 1fr);
-            }
-
-            .nav-content {
-                gap: 14px;
-            }
-
-            .nav-links {
-                gap: 15px;
             }
 
         }
 
         @media (max-width: 650px) {
 
-            .container {
-                width: calc(100% - 28px);
+            .nav-container {
+                flex-direction: column;
+                padding: 14px 0;
             }
 
             .nav-links {
                 display: none;
             }
 
-            .nav-content {
-                justify-content: center;
-                flex-wrap: wrap;
-                padding: 12px 0;
+            .hero {
+                min-height: 70vh;
             }
 
-            .language-switcher {
-                margin-left: 8px;
-            }
-
-            header {
-                padding: 75px 14px 70px;
-            }
-
-            section {
-                padding-top: 52px;
-            }
-
-            .projetos,
-            .contato-links {
+            .projects-grid,
+            .contato-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .sobre,
-            .formacao,
-            .projeto {
-                padding: 24px;
             }
 
             .hero-buttons {
                 flex-direction: column;
-                align-items: center;
+                align-items: stretch;
             }
 
-            .hero-buttons a {
+            .button {
                 width: 100%;
-                max-width: 300px;
-                text-align: center;
             }
 
-            section h2 {
-                font-size: 1.9rem;
+            .section-title {
+                font-size: 1.7rem;
             }
 
         }
 
-        /* =========================
-           ACESSIBILIDADE
-        ========================= */
+        /* ACESSIBILIDADE */
 
         @media (prefers-reduced-motion: reduce) {
 
@@ -615,6 +515,7 @@
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
             }
 
         }
@@ -625,75 +526,57 @@
 
 <body>
 
-    <!-- =========================
-         NAVEGAÇÃO
-    ========================= -->
+    <!-- NAVEGAÇÃO -->
 
-    <nav>
+    <nav aria-label="Navegação principal">
 
-        <div class="container nav-content">
+        <div class="container nav-container">
 
-            <a class="logo" href="#">
+            <a href="#inicio" class="logo">
                 Eduardo Souza Mattos
             </a>
 
-            <ul class="nav-links">
+            <div class="nav-links">
 
-                <li>
-                    <a href="#sobre"
-                       data-pt="Sobre"
-                       data-en="About">
-                        Sobre
-                    </a>
-                </li>
+                <a href="#sobre" data-pt="Sobre" data-en="About">
+                    Sobre
+                </a>
 
-                <li>
-                    <a href="#habilidades"
-                       data-pt="Habilidades"
-                       data-en="Skills">
-                        Habilidades
-                    </a>
-                </li>
+                <a href="#habilidades" data-pt="Habilidades" data-en="Skills">
+                    Habilidades
+                </a>
 
-                <li>
-                    <a href="#projetos"
-                       data-pt="Projetos"
-                       data-en="Projects">
-                        Projetos
-                    </a>
-                </li>
+                <a href="#projetos" data-pt="Projetos" data-en="Projects">
+                    Projetos
+                </a>
 
-                <li>
-                    <a href="#formacao"
-                       data-pt="Formação"
-                       data-en="Education">
-                        Formação
-                    </a>
-                </li>
+                <a href="#formacao" data-pt="Formação" data-en="Education">
+                    Formação
+                </a>
 
-                <li>
-                    <a href="#contato"
-                       data-pt="Contato"
-                       data-en="Contact">
-                        Contato
-                    </a>
-                </li>
+                <a href="#contato" data-pt="Contato" data-en="Contact">
+                    Contato
+                </a>
 
-            </ul>
+            </div>
 
             <div class="language-switcher">
 
-                <button type="button"
-                        id="btn-pt"
-                        onclick="setLanguage('pt')">
-                    PT-BR
+                <button
+                    id="btn-pt"
+                    type="button"
+                    onclick="setLanguage('pt')"
+                    aria-label="Português"
+                >
+                    PT
                 </button>
 
-                <span>|</span>
-
-                <button type="button"
-                        id="btn-en"
-                        onclick="setLanguage('en')">
+                <button
+                    id="btn-en"
+                    type="button"
+                    onclick="setLanguage('en')"
+                    aria-label="English"
+                >
                     EN
                 </button>
 
@@ -704,92 +587,101 @@
     </nav>
 
 
-    <!-- =========================
-         HERO
-    ========================= -->
+    <main>
 
-    <header>
+        <!-- HERO -->
 
-        <div class="hero">
+        <header id="inicio" class="hero">
 
-            <span class="eyebrow"
-                  data-pt="PORTFÓLIO PROFISSIONAL"
-                  data-en="PROFESSIONAL PORTFOLIO">
-                PORTFÓLIO PROFISSIONAL
-            </span>
+            <div class="container">
 
-            <h1>
-                Eduardo Souza Mattos
-            </h1>
+                <div class="hero-content">
 
-            <p class="hero-subtitle"
-               data-pt="Tecnologia da Informação · Análise de Dados · Python · SQL"
-               data-en="Information Technology · Data Analysis · Python · SQL">
-                Tecnologia da Informação · Análise de Dados · Python · SQL
-            </p>
+                    <h1>
+                        Eduardo Souza Mattos
+                    </h1>
 
-            <div class="hero-buttons">
+                    <h2
+                        data-pt="Tecnologia • Dados • Python • SQL"
+                        data-en="Technology • Data • Python • SQL"
+                    >
+                        Tecnologia • Dados • Python • SQL
+                    </h2>
 
-                <a href="https://github.com/Sponge1774"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    GitHub
-                </a>
+                    <p
+                        data-pt="Estudante de Análise e Desenvolvimento de Sistemas, construindo projetos práticos em análise de dados, Python, SQL, bancos de dados, redes, cibersegurança e infraestrutura de TI."
+                        data-en="Systems Analysis and Development student building practical projects in data analysis, Python, SQL, databases, networking, cybersecurity and IT infrastructure."
+                    >
+                        Estudante de Análise e Desenvolvimento de Sistemas,
+                        construindo projetos práticos em análise de dados,
+                        Python, SQL, bancos de dados, redes,
+                        cibersegurança e infraestrutura de TI.
+                    </p>
 
-                <a class="secondary"
-                   href="https://www.linkedin.com/in/eduardosouzamattos2018/"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    LinkedIn
-                </a>
+                    <div class="hero-buttons">
+
+                        <a
+                            href="#projetos"
+                            class="button button-primary"
+                            data-pt="Ver projetos"
+                            data-en="View projects"
+                        >
+                            Ver projetos
+                        </a>
+
+                        <a
+                            href="https://github.com/Sponge1774"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="button button-secondary"
+                        >
+                            GitHub
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com/in/eduardosouzamattos2018/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="button button-secondary"
+                        >
+                            LinkedIn
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
 
-        </div>
-
-    </header>
+        </header>
 
 
-    <main>
-
-        <!-- =========================
-             SOBRE
-        ========================= -->
+        <!-- SOBRE -->
 
         <section id="sobre">
 
             <div class="container">
 
-                <div class="section-heading">
-
-                    <div class="section-kicker"
-                         data-pt="Perfil"
-                         data-en="Profile">
-                        Perfil
-                    </div>
-
-                    <h2 data-pt="Sobre mim"
-                        data-en="About me">
-                        Sobre mim
-                    </h2>
-
-                </div>
+                <h2
+                    class="section-title"
+                    data-pt="Sobre mim"
+                    data-en="About me"
+                >
+                    Sobre mim
+                </h2>
 
                 <div class="sobre">
 
-                    <p data-pt="Profissional em transição de carreira para a área de Tecnologia da Informação, com experiência profissional em diferentes áreas de negócios e formação em Matemática e Recursos Humanos."
-                       data-en="Professional transitioning to the Information Technology field, with professional experience in different business areas and academic backgrounds in Mathematics and Human Resources.">
-                        Profissional em transição de carreira para a área de Tecnologia da Informação, com experiência profissional em diferentes áreas de negócios e formação em Matemática e Recursos Humanos.
-                    </p>
-
-                    <p data-pt="Atualmente curso Análise e Desenvolvimento de Sistemas, desenvolvendo conhecimentos em programação, análise de dados, bancos de dados, redes, infraestrutura e cibersegurança."
-                       data-en="I am currently studying Systems Analysis and Development, developing knowledge in programming, data analysis, databases, networking, infrastructure, and cybersecurity.">
-                        Atualmente curso Análise e Desenvolvimento de Sistemas, desenvolvendo conhecimentos em programação, análise de dados, bancos de dados, redes, infraestrutura e cibersegurança.
-                    </p>
-
-                    <p data-pt="Meu objetivo é aplicar conhecimentos técnicos e capacidade analítica na resolução de problemas e no desenvolvimento de soluções tecnológicas."
-                       data-en="My goal is to apply technical knowledge and analytical skills to problem-solving and the development of technology solutions.">
-                        Meu objetivo é aplicar conhecimentos técnicos e capacidade analítica na resolução de problemas e no desenvolvimento de soluções tecnológicas.
+                    <p
+                        data-pt="Profissional em transição de carreira para Tecnologia da Informação, atualmente cursando Tecnólogo em Análise e Desenvolvimento de Sistemas. Tenho formação em Matemática e experiência profissional em diferentes áreas, buscando integrar raciocínio analítico, tecnologia e resolução de problemas."
+                        data-en="Professional transitioning into Information Technology, currently studying Systems Analysis and Development. I have a background in Mathematics and professional experience in different areas, seeking to combine analytical thinking, technology and problem solving."
+                    >
+                        Profissional em transição de carreira para Tecnologia
+                        da Informação, atualmente cursando Tecnólogo em
+                        Análise e Desenvolvimento de Sistemas. Tenho formação
+                        em Matemática e experiência profissional em diferentes
+                        áreas, buscando integrar raciocínio analítico,
+                        tecnologia e resolução de problemas.
                     </p>
 
                 </div>
@@ -799,80 +691,41 @@
         </section>
 
 
-        <!-- =========================
-             HABILIDADES
-        ========================= -->
+        <!-- HABILIDADES -->
 
         <section id="habilidades">
 
             <div class="container">
 
-                <div class="section-heading">
+                <h2
+                    class="section-title"
+                    data-pt="Habilidades"
+                    data-en="Skills"
+                >
+                    Habilidades
+                </h2>
 
-                    <div class="section-kicker"
-                         data-pt="Conhecimentos"
-                         data-en="Skills">
-                        Conhecimentos
-                    </div>
+                <p
+                    class="section-subtitle"
+                    data-pt="Principais tecnologias e áreas estudadas e aplicadas nos projetos acadêmicos e de portfólio."
+                    data-en="Main technologies and areas studied and applied in academic and portfolio projects."
+                >
+                    Principais tecnologias e áreas estudadas e aplicadas nos
+                    projetos acadêmicos e de portfólio.
+                </p>
 
-                    <h2 data-pt="Habilidades"
-                        data-en="Skills">
-                        Habilidades
-                    </h2>
+                <div class="skills">
 
-                </div>
-
-                <div class="habilidades">
-
-                    <span class="habilidade">
-                        Python
-                    </span>
-
-                    <span class="habilidade">
-                        SQL
-                    </span>
-
-                    <span class="habilidade"
-                          data-pt="Análise de Dados"
-                          data-en="Data Analysis">
-                        Análise de Dados
-                    </span>
-
-                    <span class="habilidade"
-                          data-pt="Banco de Dados"
-                          data-en="Databases">
-                        Banco de Dados
-                    </span>
-
-                    <span class="habilidade">
-                        Git &amp; GitHub
-                    </span>
-
-                    <span class="habilidade"
-                          data-pt="Redes"
-                          data-en="Networking">
-                        Redes
-                    </span>
-
-                    <span class="habilidade">
-                        Linux
-                    </span>
-
-                    <span class="habilidade">
-                        Windows Server
-                    </span>
-
-                    <span class="habilidade"
-                          data-pt="Virtualização"
-                          data-en="Virtualization">
-                        Virtualização
-                    </span>
-
-                    <span class="habilidade"
-                          data-pt="Cibersegurança"
-                          data-en="Cybersecurity">
-                        Cibersegurança
-                    </span>
+                    <span class="skill">Python</span>
+                    <span class="skill">SQL</span>
+                    <span class="skill">MySQL</span>
+                    <span class="skill">Análise de Dados</span>
+                    <span class="skill">Banco de Dados</span>
+                    <span class="skill">Redes</span>
+                    <span class="skill">Cibersegurança</span>
+                    <span class="skill">Linux</span>
+                    <span class="skill">Windows Server</span>
+                    <span class="skill">Virtualização</span>
 
                 </div>
 
@@ -881,199 +734,255 @@
         </section>
 
 
-        <!-- =========================
-             PROJETOS
-        ========================= -->
+        <!-- PROJETOS -->
 
         <section id="projetos">
 
             <div class="container">
 
-                <div class="section-heading">
+                <h2
+                    class="section-title"
+                    data-pt="Projetos"
+                    data-en="Projects"
+                >
+                    Projetos
+                </h2>
 
-                    <div class="section-kicker"
-                         data-pt="Portfólio"
-                         data-en="Portfolio">
-                        Portfólio
-                    </div>
+                <p
+                    class="section-subtitle"
+                    data-pt="Projetos acadêmicos e práticos desenvolvidos durante minha formação em Tecnologia da Informação."
+                    data-en="Academic and practical projects developed during my Information Technology studies."
+                >
+                    Projetos acadêmicos e práticos desenvolvidos durante
+                    minha formação em Tecnologia da Informação.
+                </p>
 
-                    <h2 data-pt="Projetos"
-                        data-en="Projects">
-                        Projetos
-                    </h2>
-
-                </div>
-
-                <div class="projetos">
+                <div class="projects-grid">
 
 
-                    <div class="projeto">
+                    <!-- PROJETO 1 -->
 
-                        <h3 data-pt="Sistema de Controle de Estoque"
-                            data-en="Inventory Control System">
+                    <article class="projeto">
+
+                        <h3
+                            data-pt="Sistema de Controle de Estoque"
+                            data-en="Inventory Management System"
+                        >
                             Sistema de Controle de Estoque
                         </h3>
 
-                        <p data-pt="Sistema desenvolvido para controle e gerenciamento de produtos e estoque."
-                           data-en="System developed for product and inventory control and management.">
-                            Sistema desenvolvido para controle e gerenciamento de produtos e estoque.
+                        <p
+                            data-pt="Sistema desenvolvido para controle e gerenciamento de produtos e estoque."
+                            data-en="System developed for product and inventory management."
+                        >
+                            Sistema desenvolvido para controle e
+                            gerenciamento de produtos e estoque.
                         </p>
 
-                        <p class="tecnologias">
+                        <div class="tecnologias">
                             Python
-                        </p>
+                        </div>
 
-                        <a class="botao"
-                           href="https://github.com/Sponge1774/SISTEMA-DE-CONTROLE-DE-ESTOQUE"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           data-pt="Ver projeto"
-                           data-en="View project">
-                            Ver projeto
+                        <a
+                            href="https://github.com/Sponge1774/SISTEMA-DE-CONTROLE-DE-ESTOQUE"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-button"
+                            data-pt="Ver no GitHub"
+                            data-en="View on GitHub"
+                        >
+                            Ver no GitHub
                         </a>
 
-                    </div>
+                    </article>
 
 
-                    <div class="projeto">
+                    <!-- PROJETO 2 -->
 
-                        <h3 data-pt="Modelagem de Dados — Ciclo de Vendas"
-                            data-en="Data Modeling — Sales Cycle">
+                    <article class="projeto">
+
+                        <h3
+                            data-pt="Modelagem de Dados — Ciclo de Vendas"
+                            data-en="Data Modeling — Sales Cycle"
+                        >
                             Modelagem de Dados — Ciclo de Vendas
                         </h3>
 
-                        <p data-pt="Projeto de modelagem e implementação de banco de dados para um cenário de vendas de supermercado."
-                           data-en="Database modeling and implementation project for a supermarket sales scenario.">
-                            Projeto de modelagem e implementação de banco de dados para um cenário de vendas de supermercado.
+                        <p
+                            data-pt="Projeto de modelagem e implementação de banco de dados para um cenário de vendas de supermercado."
+                            data-en="Data modeling and database implementation project for a supermarket sales scenario."
+                        >
+                            Projeto de modelagem e implementação de banco de
+                            dados para um cenário de vendas de supermercado.
                         </p>
 
-                        <p class="tecnologias">
+                        <div class="tecnologias">
                             SQL · MySQL · Modelagem de Dados
-                        </p>
+                        </div>
 
-                        <a class="botao"
-                           href="https://github.com/Sponge1774/modelagem_dados_ciclo_vendas_supermercado_sql"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           data-pt="Ver projeto"
-                           data-en="View project">
-                            Ver projeto
+                        <a
+                            href="https://github.com/Sponge1774/modelagem_dados_ciclo_vendas_supermercado_sql"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-button"
+                            data-pt="Ver no GitHub"
+                            data-en="View on GitHub"
+                        >
+                            Ver no GitHub
                         </a>
 
-                    </div>
+                    </article>
 
 
-                    <div class="projeto">
+                    <!-- PROJETO 3 -->
 
-                        <h3 data-pt="Cibersegurança"
-                            data-en="Cybersecurity">
+                    <article class="projeto">
+
+                        <h3
+                            data-pt="Cibersegurança"
+                            data-en="Cybersecurity"
+                        >
                             Cibersegurança
                         </h3>
 
-                        <p data-pt="Estudos e atividades práticas relacionados à segurança da informação, redes e análise de vulnerabilidades."
-                           data-en="Studies and practical activities related to information security, networking, and vulnerability analysis.">
-                            Estudos e atividades práticas relacionados à segurança da informação, redes e análise de vulnerabilidades.
+                        <p
+                            data-pt="Estudos e atividades práticas relacionados à segurança da informação, redes e análise de vulnerabilidades."
+                            data-en="Studies and practical activities related to information security, networking and vulnerability analysis."
+                        >
+                            Estudos e atividades práticas relacionados à
+                            segurança da informação, redes e análise de
+                            vulnerabilidades.
                         </p>
 
-                        <p class="tecnologias">
+                        <div class="tecnologias">
                             Linux · Redes · Segurança
-                        </p>
+                        </div>
 
-                        <a class="botao"
-                           href="https://github.com/Sponge1774/cyber-security-tsti-unifecaf"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           data-pt="Ver projeto"
-                           data-en="View project">
-                            Ver projeto
+                        <a
+                            href="https://github.com/Sponge1774/cyber-security-tsti-unifecaf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-button"
+                            data-pt="Ver no GitHub"
+                            data-en="View on GitHub"
+                        >
+                            Ver no GitHub
                         </a>
 
-                    </div>
+                    </article>
 
 
-                    <div class="projeto">
+                    <!-- PROJETO 4 -->
 
-                        <h3 data-pt="Redes de Computadores"
-                            data-en="Computer Networking">
+                    <article class="projeto">
+
+                        <h3
+                            data-pt="Redes de Computadores"
+                            data-en="Computer Networks"
+                        >
                             Redes de Computadores
                         </h3>
 
-                        <p data-pt="Projeto relacionado à infraestrutura de redes para ambiente de varejo, incluindo controle de estoque e CFTV."
-                           data-en="Project focused on network infrastructure for a retail environment, including inventory control and CCTV.">
-                            Projeto relacionado à infraestrutura de redes para ambiente de varejo, incluindo controle de estoque e CFTV.
+                        <p
+                            data-pt="Projeto relacionado à infraestrutura de redes para ambiente de varejo, incluindo controle de estoque e CFTV."
+                            data-en="Networking infrastructure project for a retail environment, including inventory management and CCTV."
+                        >
+                            Projeto relacionado à infraestrutura de redes
+                            para ambiente de varejo, incluindo controle de
+                            estoque e CFTV.
                         </p>
 
-                        <p class="tecnologias">
+                        <div class="tecnologias">
                             Redes · CFTV · Infraestrutura
-                        </p>
+                        </div>
 
-                        <a class="botao"
-                           href="https://github.com/Sponge1774/computer_network_projeto_de_redes_loja_varejo_controle_estoque_CFTV"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           data-pt="Ver projeto"
-                           data-en="View project">
-                            Ver projeto
+                        <a
+                            href="https://github.com/Sponge1774/computer_network_projeto_de_redes_loja_varejo_controle_estoque_CFTV"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-button"
+                            data-pt="Ver no GitHub"
+                            data-en="View on GitHub"
+                        >
+                            Ver no GitHub
                         </a>
 
-                    </div>
+                    </article>
 
 
-                    <div class="projeto">
+                    <!-- PROJETO 5 -->
 
-                        <h3 data-pt="Windows Server 2022"
-                            data-en="Windows Server 2022">
+                    <article class="projeto">
+
+                        <h3
+                            data-pt="Windows Server 2022"
+                            data-en="Windows Server 2022"
+                        >
                             Windows Server 2022
                         </h3>
 
-                        <p data-pt="Projeto de configuração de servidor web utilizando ambiente Windows Server."
-                           data-en="Web server configuration project using a Windows Server environment.">
-                            Projeto de configuração de servidor web utilizando ambiente Windows Server.
+                        <p
+                            data-pt="Projeto de configuração de servidor web utilizando ambiente Windows Server."
+                            data-en="Web server configuration project using a Windows Server environment."
+                        >
+                            Projeto de configuração de servidor web utilizando
+                            ambiente Windows Server.
                         </p>
 
-                        <p class="tecnologias">
+                        <div class="tecnologias">
                             Windows Server · IIS · Servidor Web
-                        </p>
+                        </div>
 
-                        <a class="botao"
-                           href="https://github.com/Sponge1774/servidor-web-windows-server-2022"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           data-pt="Ver projeto"
-                           data-en="View project">
-                            Ver projeto
+                        <a
+                            href="https://github.com/Sponge1774/servidor-web-windows-server-2022"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-button"
+                            data-pt="Ver no GitHub"
+                            data-en="View on GitHub"
+                        >
+                            Ver no GitHub
                         </a>
 
-                    </div>
+                    </article>
 
 
-                    <div class="projeto">
+                    <!-- PROJETO 6 -->
 
-                        <h3 data-pt="Virtualização e Apache"
-                            data-en="Virtualization and Apache">
+                    <article class="projeto">
+
+                        <h3
+                            data-pt="Virtualização e Apache"
+                            data-en="Virtualization and Apache"
+                        >
                             Virtualização e Apache
                         </h3>
 
-                        <p data-pt="Laboratório envolvendo virtualização, configuração de clientes e servidor e implantação de Apache."
-                           data-en="Laboratory involving virtualization, client and server configuration, and Apache deployment.">
-                            Laboratório envolvendo virtualização, configuração de clientes e servidor e implantação de Apache.
+                        <p
+                            data-pt="Laboratório envolvendo virtualização, configuração de clientes e servidor e implantação de Apache."
+                            data-en="Laboratory involving virtualization, client and server configuration and Apache deployment."
+                        >
+                            Laboratório envolvendo virtualização,
+                            configuração de clientes e servidor e implantação
+                            de Apache.
                         </p>
 
-                        <p class="tecnologias">
+                        <div class="tecnologias">
                             Virtualização · Linux · Apache
-                        </p>
+                        </div>
 
-                        <a class="botao"
-                           href="https://github.com/Sponge1774/virtualization-lab-client-server-apache2"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           data-pt="Ver projeto"
-                           data-en="View project">
-                            Ver projeto
+                        <a
+                            href="https://github.com/Sponge1774/virtualization-lab-client-server-apache2"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-button"
+                            data-pt="Ver no GitHub"
+                            data-en="View on GitHub"
+                        >
+                            Ver no GitHub
                         </a>
 
-                    </div>
-
+                    </article>
 
                 </div>
 
@@ -1082,44 +991,37 @@
         </section>
 
 
-        <!-- =========================
-             FORMAÇÃO
-        ========================= -->
+        <!-- FORMAÇÃO -->
 
         <section id="formacao">
 
             <div class="container">
 
-                <div class="section-heading">
-
-                    <div class="section-kicker"
-                         data-pt="Educação"
-                         data-en="Education">
-                        Educação
-                    </div>
-
-                    <h2 data-pt="Formação"
-                        data-en="Education">
-                        Formação
-                    </h2>
-
-                </div>
+                <h2
+                    class="section-title"
+                    data-pt="Formação"
+                    data-en="Education"
+                >
+                    Formação
+                </h2>
 
                 <div class="formacao">
 
-                    <h3 data-pt="Análise e Desenvolvimento de Sistemas"
-                        data-en="Systems Analysis and Development">
-                        Análise e Desenvolvimento de Sistemas
+                    <h3
+                        data-pt="Tecnólogo em Análise e Desenvolvimento de Sistemas"
+                        data-en="Associate Degree in Systems Analysis and Development"
+                    >
+                        Tecnólogo em Análise e Desenvolvimento de Sistemas
                     </h3>
 
-                    <p data-pt="Graduação tecnológica em andamento."
-                       data-en="Technology degree in progress.">
-                        Graduação tecnológica em andamento.
-                    </p>
-
-                    <p data-pt="Estudos relacionados a programação, bancos de dados, engenharia de software, redes, infraestrutura e tecnologia."
-                       data-en="Studies related to programming, databases, software engineering, networking, infrastructure, and technology.">
-                        Estudos relacionados a programação, bancos de dados, engenharia de software, redes, infraestrutura e tecnologia.
+                    <p
+                        data-pt="Formação em andamento, com estudos voltados para desenvolvimento de software, bancos de dados, redes, infraestrutura, segurança da informação e análise de dados."
+                        data-en="Ongoing degree focused on software development, databases, networking, infrastructure, information security and data analysis."
+                    >
+                        Formação em andamento, com estudos voltados para
+                        desenvolvimento de software, bancos de dados, redes,
+                        infraestrutura, segurança da informação e análise
+                        de dados.
                     </p>
 
                 </div>
@@ -1129,66 +1031,57 @@
         </section>
 
 
-        <!-- =========================
-             CONTATO
-        ========================= -->
+        <!-- CONTATO -->
 
         <section id="contato">
 
             <div class="container">
 
-                <div class="section-heading">
+                <h2
+                    class="section-title"
+                    data-pt="Contato"
+                    data-en="Contact"
+                >
+                    Contato
+                </h2>
 
-                    <div class="section-kicker"
-                         data-pt="Conecte-se"
-                         data-en="Connect">
-                        Conecte-se
-                    </div>
+                <p
+                    class="section-subtitle"
+                    data-pt="Para oportunidades profissionais, projetos e networking."
+                    data-en="For professional opportunities, projects and networking."
+                >
+                    Para oportunidades profissionais, projetos e networking.
+                </p>
 
-                    <h2 data-pt="Contato"
-                        data-en="Contact">
-                        Contato
-                    </h2>
-
-                </div>
-
-                <div class="contato-links">
-
+                <div class="contato-grid">
 
                     <div class="contato-item">
 
-                        <strong>
-                            GitHub
-                        </strong>
+                        <strong>GitHub</strong>
 
-                        <a href="https://github.com/Sponge1774"
-                           target="_blank"
-                           rel="noopener noreferrer">
+                        <a
+                            href="https://github.com/Sponge1774"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             github.com/Sponge1774
                         </a>
 
                     </div>
 
-
                     <div class="contato-item">
 
-                        <strong>
-                            LinkedIn
-                        </strong>
+                        <strong>LinkedIn</strong>
 
-                        <a href="https://www.linkedin.com/in/eduardosouzamattos2018/"
-                           target="_blank"
-                           rel="noopener noreferrer">
-
-                            <span data-pt="Perfil profissional"
-                                  data-en="Professional profile">
-                                Perfil profissional
-                            </span>
-
+                        <a
+                            href="https://www.linkedin.com/in/eduardosouzamattos2018/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            linkedin.com/in/eduardosouzamattos2018
                         </a>
 
                     </div>
-
 
                 </div>
 
@@ -1199,84 +1092,62 @@
     </main>
 
 
-    <!-- =========================
-         RODAPÉ
-    ========================= -->
+    <!-- RODAPÉ -->
 
     <footer>
 
-        <p>
+        <div class="container">
 
-            <strong>
-                Eduardo Souza Mattos
-            </strong>
+            <p
+                data-pt="© 2026 Eduardo Souza Mattos — Portfólio profissional"
+                data-en="© 2026 Eduardo Souza Mattos — Professional portfolio"
+            >
+                © 2026 Eduardo Souza Mattos — Portfólio profissional
+            </p>
 
-            <span data-pt=" · Portfólio profissional"
-                  data-en=" · Professional portfolio">
-                · Portfólio profissional
-            </span>
-
-        </p>
-
-        <p>
-            © 2026
-        </p>
+        </div>
 
     </footer>
 
 
-    <!-- =========================
-         JAVASCRIPT
-    ========================= -->
+    <!-- IDIOMA -->
 
     <script>
 
         function setLanguage(language) {
 
             const elements =
-                document.querySelectorAll(
-                    "[data-pt][data-en]"
-                );
+                document.querySelectorAll("[data-pt][data-en]");
 
             elements.forEach(function(element) {
 
                 element.textContent =
-                    element.getAttribute(
-                        "data-" + language
-                    );
+                    element.getAttribute("data-" + language);
 
             });
 
             document.documentElement.lang =
-                language === "pt"
-                    ? "pt-BR"
-                    : "en";
+                language === "pt" ? "pt-BR" : "en";
 
             document
                 .getElementById("btn-pt")
                 .classList
-                .toggle(
-                    "active",
-                    language === "pt"
-                );
+                .toggle("active", language === "pt");
 
             document
                 .getElementById("btn-en")
                 .classList
-                .toggle(
-                    "active",
-                    language === "en"
-                );
+                .toggle("active", language === "en");
 
             if (language === "en") {
 
                 document.title =
-                    "Eduardo Souza Mattos | Portfolio";
+                    "Eduardo Souza Mattos | Technology, Data and Python Portfolio";
 
             } else {
 
                 document.title =
-                    "Eduardo Souza Mattos | Portfólio";
+                    "Eduardo Souza Mattos | Portfólio de Tecnologia, Dados e Python";
 
             }
 
@@ -1293,9 +1164,7 @@
             function() {
 
                 const savedLanguage =
-                    localStorage.getItem(
-                        "portfolioLanguage"
-                    ) || "pt";
+                    localStorage.getItem("portfolioLanguage") || "pt";
 
                 setLanguage(savedLanguage);
 
@@ -1305,5 +1174,4 @@
     </script>
 
 </body>
-
 </html>

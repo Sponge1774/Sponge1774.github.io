@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Portfólio profissional de Eduardo Souza Mattos - Tecnologia da Informação, Análise de Dados, Python e SQL.">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Portfólio profissional de Eduardo Souza Mattos - Tecnologia da Informação, Análise de Dados, Python e SQL.">
 
     <title>Eduardo Souza Mattos | Portfólio</title>
 
@@ -32,6 +37,7 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 85px;
         }
 
         body {
@@ -39,6 +45,12 @@
             line-height: 1.7;
             background: var(--background);
             color: var(--text);
+            overflow-x: hidden;
+        }
+
+        a,
+        button {
+            -webkit-tap-highlight-color: transparent;
         }
 
         .container {
@@ -46,11 +58,17 @@
             margin: 0 auto;
         }
 
+        /* =========================
+           NAVEGAÇÃO
+        ========================= */
+
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: var(--dark);
+            background: rgba(15, 23, 42, 0.96);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
@@ -67,6 +85,11 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 1rem;
+            transition: opacity 0.25s ease;
+        }
+
+        .logo:hover {
+            opacity: 0.8;
         }
 
         .nav-links {
@@ -76,16 +99,35 @@
         }
 
         .nav-links a {
+            position: relative;
             color: #cbd5e1;
             text-decoration: none;
             font-size: 0.92rem;
+            transition: color 0.25s ease;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.25s ease;
         }
 
         .nav-links a:hover {
             color: white;
         }
 
-        /* Seletor de idioma */
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* =========================
+           IDIOMAS
+        ========================= */
 
         .language-switcher {
             display: flex;
@@ -102,10 +144,14 @@
             font-size: 0.82rem;
             font-weight: bold;
             padding: 5px 3px;
+            transition:
+                color 0.25s ease,
+                transform 0.25s ease;
         }
 
         .language-switcher button:hover {
             color: white;
+            transform: translateY(-1px);
         }
 
         .language-switcher button.active {
@@ -118,19 +164,51 @@
             color: #64748b;
         }
 
+        /* =========================
+           HERO
+        ========================= */
+
         header {
             color: white;
             padding: 100px 20px 90px;
             text-align: center;
             background:
-                radial-gradient(circle at 15% 20%, rgba(37,99,235,0.45), transparent 32%),
-                radial-gradient(circle at 85% 70%, rgba(6,182,212,0.25), transparent 30%),
-                linear-gradient(135deg, #0f172a, #172554, #0f172a);
+                radial-gradient(
+                    circle at 15% 20%,
+                    rgba(37,99,235,0.45),
+                    transparent 32%
+                ),
+                radial-gradient(
+                    circle at 85% 70%,
+                    rgba(6,182,212,0.25),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #172554,
+                    #0f172a
+                );
         }
 
         .hero {
             max-width: 900px;
             margin: auto;
+            animation: heroEnter 0.8s ease both;
+        }
+
+        @keyframes heroEnter {
+
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
         }
 
         .eyebrow {
@@ -173,10 +251,16 @@
             font-weight: bold;
             background: var(--primary);
             color: white;
+            transition:
+                background 0.25s ease,
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
         }
 
         .hero-buttons a:hover {
             background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(37,99,235,0.25);
         }
 
         .hero-buttons .secondary {
@@ -184,8 +268,13 @@
             border: 1px solid rgba(255,255,255,0.2);
         }
 
+        /* =========================
+           SEÇÕES
+        ========================= */
+
         section {
             padding: 70px 0 0;
+            scroll-margin-top: 85px;
         }
 
         .section-heading {
@@ -206,12 +295,24 @@
             color: var(--dark);
         }
 
+        /* =========================
+           SOBRE
+        ========================= */
+
         .sobre {
             background: var(--white);
             padding: 34px;
             border: 1px solid var(--border);
             border-radius: var(--radius);
             box-shadow: var(--shadow);
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .sobre:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 34px rgba(15,23,42,0.10);
         }
 
         .sobre p {
@@ -221,6 +322,10 @@
         .sobre p + p {
             margin-top: 18px;
         }
+
+        /* =========================
+           HABILIDADES
+        ========================= */
 
         .habilidades {
             display: flex;
@@ -236,7 +341,21 @@
             color: #334155;
             font-weight: bold;
             box-shadow: 0 4px 12px rgba(15,23,42,0.04);
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
         }
+
+        .habilidade:hover {
+            transform: translateY(-3px);
+            border-color: #bfdbfe;
+            box-shadow: 0 8px 18px rgba(15,23,42,0.08);
+        }
+
+        /* =========================
+           PROJETOS
+        ========================= */
 
         .projetos {
             display: grid;
@@ -253,11 +372,16 @@
             border: 1px solid var(--border);
             border-radius: var(--radius);
             box-shadow: var(--shadow);
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
         }
 
         .projeto:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
             border-color: #bfdbfe;
+            box-shadow: 0 18px 38px rgba(15,23,42,0.12);
         }
 
         .projeto h3 {
@@ -290,11 +414,21 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 0.9rem;
+            transition:
+                background 0.25s ease,
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
         }
 
         .botao:hover {
             background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 7px 16px rgba(37,99,235,0.22);
         }
+
+        /* =========================
+           FORMAÇÃO
+        ========================= */
 
         .formacao {
             background: var(--white);
@@ -302,6 +436,14 @@
             border: 1px solid var(--border);
             border-radius: var(--radius);
             box-shadow: var(--shadow);
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .formacao:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 34px rgba(15,23,42,0.10);
         }
 
         .formacao h3 {
@@ -312,6 +454,14 @@
         .formacao p {
             color: var(--text-light);
         }
+
+        .formacao p + p {
+            margin-top: 10px;
+        }
+
+        /* =========================
+           CONTATO
+        ========================= */
 
         .contato-links {
             display: grid;
@@ -324,6 +474,16 @@
             border: 1px solid var(--border);
             border-radius: 14px;
             background: var(--soft-blue);
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        .contato-item:hover {
+            transform: translateY(-4px);
+            border-color: #bfdbfe;
+            box-shadow: 0 12px 24px rgba(15,23,42,0.08);
         }
 
         .contato-item strong {
@@ -336,7 +496,16 @@
             color: var(--primary);
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.25s ease;
         }
+
+        .contato-item a:hover {
+            color: var(--primary-dark);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             margin-top: 80px;
@@ -350,10 +519,26 @@
             color: #e2e8f0;
         }
 
+        footer p + p {
+            margin-top: 5px;
+        }
+
+        /* =========================
+           RESPONSIVIDADE
+        ========================= */
+
         @media (max-width: 900px) {
 
             .projetos {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .nav-content {
+                gap: 14px;
+            }
+
+            .nav-links {
+                gap: 15px;
             }
 
         }
@@ -397,9 +582,15 @@
                 padding: 24px;
             }
 
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
             .hero-buttons a {
                 width: 100%;
                 max-width: 300px;
+                text-align: center;
             }
 
             section h2 {
@@ -408,10 +599,35 @@
 
         }
 
+        /* =========================
+           ACESSIBILIDADE
+        ========================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+        }
+
     </style>
+
 </head>
 
 <body>
+
+    <!-- =========================
+         NAVEGAÇÃO
+    ========================= -->
 
     <nav>
 
@@ -424,31 +640,41 @@
             <ul class="nav-links">
 
                 <li>
-                    <a href="#sobre" data-pt="Sobre" data-en="About">
+                    <a href="#sobre"
+                       data-pt="Sobre"
+                       data-en="About">
                         Sobre
                     </a>
                 </li>
 
                 <li>
-                    <a href="#habilidades" data-pt="Habilidades" data-en="Skills">
+                    <a href="#habilidades"
+                       data-pt="Habilidades"
+                       data-en="Skills">
                         Habilidades
                     </a>
                 </li>
 
                 <li>
-                    <a href="#projetos" data-pt="Projetos" data-en="Projects">
+                    <a href="#projetos"
+                       data-pt="Projetos"
+                       data-en="Projects">
                         Projetos
                     </a>
                 </li>
 
                 <li>
-                    <a href="#formacao" data-pt="Formação" data-en="Education">
+                    <a href="#formacao"
+                       data-pt="Formação"
+                       data-en="Education">
                         Formação
                     </a>
                 </li>
 
                 <li>
-                    <a href="#contato" data-pt="Contato" data-en="Contact">
+                    <a href="#contato"
+                       data-pt="Contato"
+                       data-en="Contact">
                         Contato
                     </a>
                 </li>
@@ -476,6 +702,11 @@
         </div>
 
     </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <header>
 
@@ -518,9 +749,12 @@
 
     </header>
 
+
     <main>
 
-        <!-- SOBRE -->
+        <!-- =========================
+             SOBRE
+        ========================= -->
 
         <section id="sobre">
 
@@ -564,7 +798,10 @@
 
         </section>
 
-        <!-- HABILIDADES -->
+
+        <!-- =========================
+             HABILIDADES
+        ========================= -->
 
         <section id="habilidades">
 
@@ -587,8 +824,14 @@
 
                 <div class="habilidades">
 
-                    <span class="habilidade">Python</span>
-                    <span class="habilidade">SQL</span>
+                    <span class="habilidade">
+                        Python
+                    </span>
+
+                    <span class="habilidade">
+                        SQL
+                    </span>
+
                     <span class="habilidade"
                           data-pt="Análise de Dados"
                           data-en="Data Analysis">
@@ -601,7 +844,9 @@
                         Banco de Dados
                     </span>
 
-                    <span class="habilidade">Git &amp; GitHub</span>
+                    <span class="habilidade">
+                        Git &amp; GitHub
+                    </span>
 
                     <span class="habilidade"
                           data-pt="Redes"
@@ -609,9 +854,13 @@
                         Redes
                     </span>
 
-                    <span class="habilidade">Linux</span>
+                    <span class="habilidade">
+                        Linux
+                    </span>
 
-                    <span class="habilidade">Windows Server</span>
+                    <span class="habilidade">
+                        Windows Server
+                    </span>
 
                     <span class="habilidade"
                           data-pt="Virtualização"
@@ -631,7 +880,10 @@
 
         </section>
 
-        <!-- PROJETOS -->
+
+        <!-- =========================
+             PROJETOS
+        ========================= -->
 
         <section id="projetos">
 
@@ -653,6 +905,7 @@
                 </div>
 
                 <div class="projetos">
+
 
                     <div class="projeto">
 
@@ -681,6 +934,7 @@
 
                     </div>
 
+
                     <div class="projeto">
 
                         <h3 data-pt="Modelagem de Dados — Ciclo de Vendas"
@@ -707,6 +961,7 @@
                         </a>
 
                     </div>
+
 
                     <div class="projeto">
 
@@ -735,6 +990,7 @@
 
                     </div>
 
+
                     <div class="projeto">
 
                         <h3 data-pt="Redes de Computadores"
@@ -761,6 +1017,7 @@
                         </a>
 
                     </div>
+
 
                     <div class="projeto">
 
@@ -789,6 +1046,7 @@
 
                     </div>
 
+
                     <div class="projeto">
 
                         <h3 data-pt="Virtualização e Apache"
@@ -816,13 +1074,17 @@
 
                     </div>
 
+
                 </div>
 
             </div>
 
         </section>
 
-        <!-- FORMAÇÃO -->
+
+        <!-- =========================
+             FORMAÇÃO
+        ========================= -->
 
         <section id="formacao">
 
@@ -866,7 +1128,10 @@
 
         </section>
 
-        <!-- CONTATO -->
+
+        <!-- =========================
+             CONTATO
+        ========================= -->
 
         <section id="contato">
 
@@ -889,6 +1154,7 @@
 
                 <div class="contato-links">
 
+
                     <div class="contato-item">
 
                         <strong>
@@ -903,6 +1169,7 @@
 
                     </div>
 
+
                     <div class="contato-item">
 
                         <strong>
@@ -912,13 +1179,16 @@
                         <a href="https://www.linkedin.com/in/eduardosouzamattos2018/"
                            target="_blank"
                            rel="noopener noreferrer">
+
                             <span data-pt="Perfil profissional"
                                   data-en="Professional profile">
                                 Perfil profissional
                             </span>
+
                         </a>
 
                     </div>
+
 
                 </div>
 
@@ -928,15 +1198,24 @@
 
     </main>
 
+
+    <!-- =========================
+         RODAPÉ
+    ========================= -->
+
     <footer>
 
         <p>
-            <strong>Eduardo Souza Mattos</strong>
+
+            <strong>
+                Eduardo Souza Mattos
+            </strong>
 
             <span data-pt=" · Portfólio profissional"
                   data-en=" · Professional portfolio">
                 · Portfólio profissional
             </span>
+
         </p>
 
         <p>
@@ -945,28 +1224,49 @@
 
     </footer>
 
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
     <script>
 
         function setLanguage(language) {
 
-            const elements = document.querySelectorAll("[data-pt][data-en]");
+            const elements =
+                document.querySelectorAll(
+                    "[data-pt][data-en]"
+                );
 
             elements.forEach(function(element) {
 
-                element.textContent = element.getAttribute(
-                    "data-" + language
-                );
+                element.textContent =
+                    element.getAttribute(
+                        "data-" + language
+                    );
 
             });
 
             document.documentElement.lang =
-                language === "pt" ? "pt-BR" : "en";
+                language === "pt"
+                    ? "pt-BR"
+                    : "en";
 
-            document.getElementById("btn-pt")
-                .classList.toggle("active", language === "pt");
+            document
+                .getElementById("btn-pt")
+                .classList
+                .toggle(
+                    "active",
+                    language === "pt"
+                );
 
-            document.getElementById("btn-en")
-                .classList.toggle("active", language === "en");
+            document
+                .getElementById("btn-en")
+                .classList
+                .toggle(
+                    "active",
+                    language === "en"
+                );
 
             if (language === "en") {
 
@@ -984,18 +1284,26 @@
                 "portfolioLanguage",
                 language
             );
+
         }
 
-        document.addEventListener("DOMContentLoaded", function() {
 
-            const savedLanguage =
-                localStorage.getItem("portfolioLanguage") || "pt";
+        document.addEventListener(
+            "DOMContentLoaded",
+            function() {
 
-            setLanguage(savedLanguage);
+                const savedLanguage =
+                    localStorage.getItem(
+                        "portfolioLanguage"
+                    ) || "pt";
 
-        });
+                setLanguage(savedLanguage);
+
+            }
+        );
 
     </script>
 
 </body>
+
 </html>
